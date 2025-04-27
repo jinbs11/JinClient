@@ -1,0 +1,16 @@
+C:\jinclient\JinClient\client\client\bin\Debug\net7.0-windows\client.exe
+C:\jinclient\JinClient\client\client\bin\Debug\net7.0-windows\client.deps.json
+C:\jinclient\JinClient\client\client\bin\Debug\net7.0-windows\client.runtimeconfig.json
+C:\jinclient\JinClient\client\client\bin\Debug\net7.0-windows\client.dll
+C:\jinclient\JinClient\client\client\bin\Debug\net7.0-windows\client.pdb
+C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\client.client.resources
+C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\client.csproj.GenerateResource.cache
+C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\client.GeneratedMSBuildEditorConfig.editorconfig
+C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\client.AssemblyInfoInputs.cache
+C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\client.AssemblyInfo.cs
+C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\client.csproj.CoreCompileInputs.cache
+C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\client.dll
+C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\refint\client.dll
+C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\client.pdb
+C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\client.genruntimeconfig.cache
+C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\ref\client.dll
