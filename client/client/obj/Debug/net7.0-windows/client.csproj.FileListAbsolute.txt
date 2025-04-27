@@ -14,3 +14,4 @@ C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\refint\client.dll
 C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\client.pdb
 C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\client.genruntimeconfig.cache
 C:\jinclient\JinClient\client\client\obj\Debug\net7.0-windows\ref\client.dll
+C:\jinclient\JinClient\client\client\bin\Debug\net7.0-windows\fonts\Basketball.otf

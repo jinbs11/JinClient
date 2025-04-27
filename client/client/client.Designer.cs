@@ -1,16 +1,13 @@
-﻿namespace client
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace client
 {
-    partial class client
+    public partial class client : Form
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,26 +19,51 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
+            clientName = new Label();
+            topPanel = new Panel();
+            topPanel.SuspendLayout();
             SuspendLayout();
+            // 
+            // clientName
+            // 
+            clientName.Anchor = AnchorStyles.None;
+            clientName.AutoSize = true;
+            clientName.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            clientName.Location = new Point(452, 49);
+            clientName.Name = "clientName";
+            clientName.Size = new Size(245, 65);
+            clientName.TabIndex = 0;
+            clientName.Text = "JINCLIENT";
+            // 
+            // topPanel
+            // 
+            topPanel.Controls.Add(clientName);
+            topPanel.Dock = DockStyle.Top;
+            topPanel.Location = new Point(0, 0);
+            topPanel.Name = "topPanel";
+            topPanel.Size = new Size(1184, 163);
+            topPanel.TabIndex = 1;
             // 
             // client
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 611);
+            Controls.Add(topPanel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "client";
             Text = "JinClient";
+            topPanel.ResumeLayout(false);
+            topPanel.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Label clientName;
+        private Panel topPanel;
     }
 }
