@@ -50,6 +50,8 @@ namespace client
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.clientBG;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 611);
             Controls.Add(topPanel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
