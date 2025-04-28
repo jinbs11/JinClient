@@ -67,7 +67,8 @@ namespace client
 
         private void modPanel1_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("test");
+            modPanel1.BackColor = Color.Green;
         }
+
     }
 }

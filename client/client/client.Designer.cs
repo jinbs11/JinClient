@@ -112,6 +112,7 @@ namespace client
             modPanel1.Name = "modPanel1";
             modPanel1.Size = new Size(200, 131);
             modPanel1.TabIndex = 1;
+            modPanel1.Click += modPanel1_Click;
             // 
             // modText1
             // 
