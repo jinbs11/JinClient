@@ -15,7 +15,7 @@ namespace client
 
             // TOP PANEL
             topPanel.Dock = DockStyle.Top;
-            topPanel.BackColor = Color.Blue;
+            topPanel.BackColor = Color.FromArgb(150, Color.Black);
             topPanel.Height = 160;
             this.Controls.Add(topPanel);
 
@@ -27,6 +27,16 @@ namespace client
             clientName.AutoSize = true;
             clientName.Location = new Point((topPanel.Width - clientName.Width) / 2, (topPanel.Height - clientName.Height) / 2);
             topPanel.Controls.Add(clientName);
+        }
+
+        private void playBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void settingsBTN_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
