@@ -5,6 +5,7 @@ import { Client } from 'minecraft-launcher-core';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const version = '1.8.9-forge1.8.9-11.15.1.2318-1.8.9';
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -30,14 +31,15 @@ app.whenReady().then(() => {
       await launcher.launch({
         authorization: {
           access_token: '123',
-          name: 'OfflineUser',
+          name: 'test-user1',
           uuid: '1234',
           user_properties: '{}',
           meta: { type: 'mojang' },
         },
         root: './.minecraft',
-        version: { number: '1.8.9', type: 'release' },
+        version: { number: "1.8.9-forge1.8.9-11.15.1.2318-1.8.9", type: 'custom' },
         memory: { max: '4G', min: '1G' },
+        assets: '1.8'
       });
     } catch (err) {
       console.error('Minecraft launch failed:', err);

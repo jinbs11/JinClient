@@ -25,9 +25,13 @@ export const PlayView  = () => {
 
 export const ModsView  = () => {
     return (
-        <div className="w-full h-full">
-            <h1 className="text-2xl font-bold mb-3">Mods</h1>
-            <div className="w-full h-full bg-[#242635] rounded"></div>
+        <div className="w-full h-full grid grid-cols-2 gap-5">
+            <div className="w-full h-full bg-[#242635] rounded text-center">
+                <h1 className="text-2xl font-bold mb-3 mt-1">Mods</h1>
+            </div>
+            <div className="w-full h-full bg-[#242635] rounded text-center">
+                <h1 className="text-2xl font-bold mb-3 mt-1">Recource Packs</h1>
+            </div>
         </div>
     )
 }
