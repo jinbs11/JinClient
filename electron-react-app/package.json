@@ -9,6 +9,7 @@
     "electron": "electron ."
   },
   "dependencies": {
+    "follow-redirects": "^1.15.9",
     "minecraft-launcher-core": "^3.18.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
