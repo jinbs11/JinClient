@@ -7,6 +7,7 @@ import { SettingsView, ModsView, PlayView } from './components/OptionsView'
 
 function App() {
   const [view, setView] = useState("play");
+  const [user, setUser] = useState<string | null>(null);
 
   const renderContent = () => {
     switch (view) {
@@ -24,7 +25,7 @@ function App() {
   return (
     <div className="flex flex-col h-screen bg-[#2B2D3C]">
       {/* Yläpalkki */}
-      <TopBar />
+      <TopBar user={user} onLogin={setUser} />
 
       {/* Sivupalkki + sisältö rivissä */}
       <div className="flex flex-1">

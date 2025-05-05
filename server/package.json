@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node fetchAllMods.js"
+    "dev": "node fetchAllMods.js",
+    "server": "node index.js"
   },
   "keywords": [],
   "author": "",

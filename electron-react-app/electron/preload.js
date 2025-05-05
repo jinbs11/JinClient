@@ -5,5 +5,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
   launchGame: () => ipcRenderer.invoke('launch-minecraft'),
   copyMod: (filename) => ipcRenderer.invoke('copy-mod', filename),
   removeMod: (filename) => ipcRenderer.invoke('remove-mod', filename),
-  checkInstalledMods: (filenames) => ipcRenderer.invoke('check-installed-mods', filenames)
+  checkInstalledMods: (filenames) => ipcRenderer.invoke('check-installed-mods', filenames),
+  invoke: (channel, ...args) => ipcRenderer.invoke(channel, ...args),
 });

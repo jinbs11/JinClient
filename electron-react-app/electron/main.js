@@ -22,6 +22,39 @@ execFile('node', [fetchModsScript], (error, stdout, stderr) => {
   if (stderr) console.error('⚠️ stderr:', stderr);
 });
 
+ipcMain.handle("login-with-microsoft", async () => {
+  return new Promise((resolve, reject) => {
+    const clientId = "e6fd8ee6-21b5-482d-988d-b8aae6980d3a";
+    const redirectUri = "http://localhost:5173/auth-callback";
+    const scope = "XboxLive.signin offline_access";
+
+    const authUrl = `https://login.microsoftonline.com/consumers/oauth2/v2.0/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&response_mode=query&scope=${encodeURIComponent(scope)}&state=123`;
+
+    const authWin = new BrowserWindow({
+      width: 600,
+      height: 700,
+      webPreferences: {
+        nodeIntegration: false
+      }
+    });
+
+    authWin.loadURL(authUrl);
+
+    // Tarkkaile URLia
+    authWin.webContents.on('will-redirect', (event, url) => {
+      const parsedUrl = new URL(url);
+      if (parsedUrl.origin === "http://localhost:5173" && parsedUrl.pathname === "/auth-callback") {
+        const code = parsedUrl.searchParams.get("code");
+        if (code) {
+          event.preventDefault(); // estä uudelleenlataus
+          authWin.close();
+          resolve(code); // lähetä code takaisin render-prosessille
+        }
+      }
+    });
+  });
+});
+
 function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
