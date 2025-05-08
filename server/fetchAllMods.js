@@ -9,16 +9,24 @@ const modsFolderPath = path.join(__dirname, '..', 'electron-react-app', 'mods_in
 // 📁 Mihin kirjoitetaan mods.json
 const modsJsonPath = path.join(__dirname, '..', 'electron-react-app', 'public', 'mods.json');
 
-// 🔧 Varmista että kansio on olemassa
+// Varmista että kansio on olemassa
 if (!fs.existsSync(modsFolderPath)) {
   fs.mkdirSync(modsFolderPath, { recursive: true });
 }
 
-// 🔧 Modilistat
+// Modilistat
 const modsList = [
   {
     name: "Skytils",
     repo: "Skytils/SkytilsMod"
+  },
+  {
+    name: "NotEnoughUpdates",
+    repo: "NotEnoughUpdates/NotEnoughUpdates"
+  },
+  {
+    name: "SkyHanni",
+    repo: "hannibal002/SkyHanni"
   },
 ];
 
