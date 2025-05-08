@@ -2,4 +2,4 @@
 
 Minecraft Hypixel Skyblock custom client
 
-Mods auto updater
+Mods auto updater for forge
