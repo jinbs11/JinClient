@@ -1,0 +1,40 @@
+// index.js
+const express = require('express');
+const cors = require('cors');
+const MicrosoftAuth = require('./MicrosoftAuth'); // uusi luokka
+const app = express();
+const PORT = 5174;
+
+app.use(cors({ origin: "http://localhost:5173" }));
+app.use(express.json());
+
+app.post('/auth/token', async (req, res) => {
+  const { code } = req.body;
+
+  const auth = new MicrosoftAuth({
+    client_id: 'e6fd8ee6-21b5-482d-988d-b8aae6980d3a',
+    client_secret: '', // lisää jos käytät client_secret
+    redirect_uri: 'http://localhost:5173/auth-callback',
+    code
+  });
+
+  try {
+    await auth.getTokens();
+    const xbl = await auth.getXBL();
+    const xsts = await auth.getXSTS(xbl.Token);
+    await auth.getXboxLogin();
+
+    const hasGame = await auth.getMCStore();
+    if (!hasGame) return res.status(403).json({ error: 'Account does not own Minecraft' });
+
+    const profile = await auth.getProfile();
+    return res.json({ username: profile.name, uuid: profile.uuid });
+  } catch (err) {
+    console.error("❌ Auth error:", err);
+    return res.status(500).json({ error: "Authentication failed" });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Auth server running at http://localhost:${PORT}`);
+});
