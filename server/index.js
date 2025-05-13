@@ -1,7 +1,7 @@
 // index.js
 import express from 'express';
 import cors from 'cors';
-import MicrosoftAuth from './MicrosoftAuth.js'; // HUOM: .js-pääte vaaditaan
+import MicrosoftAuth from './MicrosoftAuth.js';
 const app = express();
 const PORT = 5174;
 

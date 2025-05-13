@@ -144,4 +144,4 @@ class MicrosoftAuth {
   }
 }
 
-export default new MicrosoftAuth();
+export default MicrosoftAuth;
