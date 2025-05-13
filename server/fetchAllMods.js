@@ -1,13 +1,20 @@
-const fs = require('fs');
-const path = require('path');
-const fetch = require('node-fetch');
-const https = require('follow-redirects').https;
-require('dotenv').config({ path: path.join(__dirname, '.env') });
+import fs from 'fs';
+import path from 'path';
+import fetch from 'node-fetch';
+import followRedirects from 'follow-redirects';
+import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-// 📁 Mihin .jarit menee
-const modsFolderPath = path.join(__dirname, '..', 'electron-react-app', 'mods_inactive');
-// 📁 Mihin kirjoitetaan mods.json
-const modsJsonPath = path.join(__dirname, '..', 'electron-react-app', 'public', 'mods.json');
+const { https } = followRedirects;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+dotenv.config({ path: path.join(__dirname, '..', '.env') });
+
+const modsFolderPath = path.join(__dirname, '..', 'mods_inactive');
+const modsJsonPath = path.join(__dirname, '..', 'public', 'mods.json');
 
 // Varmista että kansio on olemassa
 if (!fs.existsSync(modsFolderPath)) {

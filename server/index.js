@@ -1,7 +1,7 @@
 // index.js
-const express = require('express');
-const cors = require('cors');
-const MicrosoftAuth = require('./MicrosoftAuth'); // uusi luokka
+import express from 'express';
+import cors from 'cors';
+import MicrosoftAuth from './MicrosoftAuth.js'; // HUOM: .js-pääte vaaditaan
 const app = express();
 const PORT = 5174;
 

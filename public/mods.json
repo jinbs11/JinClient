@@ -1,7 +1,17 @@
 [
   {
-    "name": "SkytilsMod",
-    "filename": "Skytils-1.10.13.jar",
-    "url": "https://github.com/Skytils/SkytilsMod/releases/download/v1.10.13/Skytils-1.10.13.jar"
+    "name": "Skytils",
+    "filename": "Skytils-1.11.0.jar",
+    "url": "https://github.com/Skytils/SkytilsMod/releases/download/v1.11.0/Skytils-1.11.0.jar"
+  },
+  {
+    "name": "NotEnoughUpdates",
+    "filename": "NotEnoughUpdates-2.5.0.jar",
+    "url": "https://github.com/NotEnoughUpdates/NotEnoughUpdates/releases/download/2.5.0/NotEnoughUpdates-2.5.0.jar"
+  },
+  {
+    "name": "SkyHanni",
+    "filename": "SkyHanni-3.0.0-mc1.8.9.jar",
+    "url": "https://github.com/hannibal002/SkyHanni/releases/download/3.0.0/SkyHanni-3.0.0-mc1.8.9.jar"
   }
 ]

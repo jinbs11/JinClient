@@ -1,5 +1,5 @@
 // MicrosoftAuth.js
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 class MicrosoftAuth {
   constructor(options = {}) {
@@ -144,4 +144,4 @@ class MicrosoftAuth {
   }
 }
 
-module.exports = MicrosoftAuth;
+export default new MicrosoftAuth();

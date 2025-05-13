@@ -1,0 +1,45 @@
+{
+  "name": "jinclient",
+  "version": "1.0.0",
+  "main": "electron/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:server\" \"npm:react\" \"npm:electron\"",
+    "server": "node ./server/index.js",
+    "react": "vite",
+    "electron": "wait-on http://localhost:5173 && electron .",
+    "build": "vite build",
+    "postinstall": "electron-rebuild -v 36.2.0 --module-dir=./server"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^4.11.1",
+    "@azure/msal-react": "^3.0.11",
+    "better-sqlite3": "^8.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "electron": "^36.2.0",
+    "express": "^5.1.0",
+    "follow-redirects": "^1.15.9",
+    "minecraft-launcher-core": "^3.18.2",
+    "node-fetch": "^2.7.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.5.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.4",
+    "@vitejs/plugin-react": "^4.4.1",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.2",
+    "electron-rebuild": "^3.2.9",
+    "globals": "^16.0.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.3.5",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.26.1",
+    "vite": "^5.2.0",
+    "wait-on": "^7.0.1"
+  }
+}
