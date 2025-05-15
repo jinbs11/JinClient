@@ -1,0 +1,61 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.fireflies.emitter": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"particle_source": {
+					"relative_to": {
+						"rotation": "world"
+					},
+					"rotation": [0, 0, 0.01]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "essential:fireflies_world_space",
+						"locator": "particle_source"
+					},
+					{
+						"effect": "essential:fireflies_entity_space",
+						"locator": "particle_source"
+					}
+				]
+			}
+		},
+		"animation.fireflies.loop": {
+			"loop": true,
+			"animation_length": 3,
+			"bones": {
+				"particle_source": {
+					"relative_to": {
+						"rotation": "world"
+					},
+					"rotation": [0, 0, 0.01]
+				}
+			}
+		}
+	},
+	"triggers": [
+		{
+			"type": "IDLE",
+			"target": "ALL",
+			"name": "animation.fireflies.emitter",
+			"probability": 1,
+			"priority": 1,
+			"skips": 0,
+			"loops": 1,
+			"on_complete": {
+				"type": "IDLE",
+				"target": "ALL",
+				"name": "animation.fireflies.loop",
+				"probability": 1,
+				"priority": 1,
+				"skips": 0,
+				"loops": 0
+			}
+		}
+	]
+}

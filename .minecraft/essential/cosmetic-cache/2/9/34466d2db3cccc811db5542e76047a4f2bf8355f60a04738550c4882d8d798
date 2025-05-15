@@ -1,0 +1,10 @@
+[
+  {
+    "id": "imagination_rainbow",
+    "type": "INTERRUPTS_EMOTE",
+    "enabled": true,
+    "data": {
+      "MOVEMENT": true
+    }
+  }
+]

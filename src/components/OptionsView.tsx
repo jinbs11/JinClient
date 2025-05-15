@@ -90,7 +90,7 @@ function ModList({ mods }: { mods: { name: string; url: string; filename: string
               e.stopPropagation();
               toggle(index);
             }}
-            className="flex items-center justify-between p-6 bg-[#212230] rounded-xl mb-2 mx-2 cursor-pointer hover:bg-[#1F202E]"
+            className="flex items-center justify-between p-6 bg-[#212230] rounded mb-2 mx-2 cursor-pointer hover:bg-[#1F202E]"
           >
             <h1 className="text-white">{mod.name}</h1>
   

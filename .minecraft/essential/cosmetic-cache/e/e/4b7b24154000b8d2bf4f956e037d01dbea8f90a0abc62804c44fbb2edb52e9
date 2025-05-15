@@ -1,0 +1,212 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.demonic_overlord_staff",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "particles_main_left",
+					"parent": "body",
+					"pivot": [0, 18, 3.02],
+					"rotation": [0, 0, 55]
+				},
+				{
+					"name": "particle_source_left",
+					"parent": "particles_main_left",
+					"pivot": [0.16825, 33.62233, 3.02],
+					"locators": {
+						"particle_source_left": [0.16825, 33.62233, 3]
+					},
+					"side": "left"
+				},
+				{
+					"name": "particles_main_right",
+					"parent": "body",
+					"pivot": [0, 18, 3.02],
+					"rotation": [0, 0, -55]
+				},
+				{
+					"name": "particle_source_right",
+					"parent": "particles_main_right",
+					"pivot": [-0.16825, 33.62233, 3.02],
+					"locators": {
+						"particle_source_right": [-0.16825, 33.62233, 3]
+					},
+					"side": "right"
+				},
+				{
+					"name": "side_right",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"side": "right"
+				},
+				{
+					"name": "scythe_right",
+					"parent": "side_right",
+					"pivot": [-2, 20, 3.02],
+					"side": "right"
+				},
+				{
+					"name": "weapon_right",
+					"parent": "scythe_right",
+					"pivot": [0, 18, 3.02],
+					"rotation": [0, 0, -55],
+					"side": "right",
+					"cubes": [
+						{"origin": [-1, 2, 2.02], "size": [2, 32, 2], "uv": [0, 1], "mirror": true},
+						{
+							"origin": [-7, 23, 3.02],
+							"size": [14, 19, 0],
+							"uv": {
+								"south": {"uv": [44, 2], "uv_size": [-14, 19]}
+							}
+						},
+						{
+							"origin": [0, 23, -3.98],
+							"size": [0, 19, 14],
+							"uv": {
+								"west": {"uv": [59, 2], "uv_size": [-14, 19]}
+							}
+						},
+						{
+							"origin": [-5, -1, 3.02],
+							"size": [10, 12, 0],
+							"uv": {
+								"south": {"uv": [10, 36], "uv_size": [-10, 12]}
+							}
+						}
+					]
+				},
+				{
+					"name": "orb_right",
+					"parent": "weapon_right",
+					"pivot": [0, 37.5, 3.02],
+					"side": "right",
+					"cubes": [
+						{
+							"origin": [-1.5, 36, 1.52],
+							"size": [3, 3, 3],
+							"uv": {
+								"north": {"uv": [11, 36], "uv_size": [3, 3]},
+								"east": {"uv": [14, 36], "uv_size": [-3, 3]},
+								"south": {"uv": [14, 36], "uv_size": [-3, 3]},
+								"west": {"uv": [14, 36], "uv_size": [-3, 3]},
+								"up": {"uv": [11, 39], "uv_size": [3, -3]},
+								"down": {"uv": [11, 39], "uv_size": [3, -3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "cloth_right",
+					"parent": "scythe_right",
+					"pivot": [0, -1, 0],
+					"side": "right",
+					"cubes": [
+						{
+							"origin": [-3, 12, 3.02],
+							"size": [4, 8, 0],
+							"uv": {
+								"south": {"uv": [15, 17], "uv_size": [-4, 8]}
+							}
+						}
+					]
+				},
+				{
+					"name": "side_left",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"side": "left"
+				},
+				{
+					"name": "scythe_left",
+					"parent": "side_left",
+					"pivot": [2, 20, 3.02],
+					"side": "left"
+				},
+				{
+					"name": "weapon_left",
+					"parent": "scythe_left",
+					"pivot": [0, 18, 3.02],
+					"rotation": [0, 0, 55],
+					"side": "left",
+					"cubes": [
+						{"origin": [-1, 2, 2.02], "size": [2, 32, 2], "uv": [0, 1]},
+						{
+							"origin": [-7, 23, 3.02],
+							"size": [14, 19, 0],
+							"uv": {
+								"south": {"uv": [30, 2], "uv_size": [14, 19]}
+							}
+						},
+						{
+							"origin": [0, 23, -3.98],
+							"size": [0, 19, 14],
+							"uv": {
+								"east": {"uv": [45, 2], "uv_size": [14, 19]}
+							}
+						},
+						{
+							"origin": [-5, -1, 3.02],
+							"size": [10, 12, 0],
+							"uv": {
+								"south": {"uv": [0, 36], "uv_size": [10, 12]}
+							}
+						}
+					]
+				},
+				{
+					"name": "orb_left",
+					"parent": "weapon_left",
+					"pivot": [0, 37.5, 3.02],
+					"side": "left",
+					"cubes": [
+						{
+							"origin": [-1.5, 36, 1.52],
+							"size": [3, 3, 3],
+							"uv": {
+								"north": {"uv": [14, 36], "uv_size": [-3, 3]},
+								"east": {"uv": [11, 36], "uv_size": [3, 3]},
+								"south": {"uv": [11, 36], "uv_size": [3, 3]},
+								"west": {"uv": [11, 36], "uv_size": [3, 3]},
+								"up": {"uv": [14, 39], "uv_size": [-3, -3]},
+								"down": {"uv": [14, 39], "uv_size": [-3, -3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "cloth_left",
+					"parent": "scythe_left",
+					"pivot": [0, -1, 0],
+					"side": "left",
+					"cubes": [
+						{
+							"origin": [-1, 12, 3.02],
+							"size": [4, 8, 0],
+							"uv": {
+								"south": {"uv": [11, 17], "uv_size": [4, 8]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,182 @@
+[
+    {
+        "type": "POSITION_RANGE",
+        "id": "UNUSED",
+        "enabled": true,
+        "data": {
+            "y_min": -2.0,
+            "y_max": 2.0
+        }
+    },
+    {
+        "type": "VARIANTS",
+        "id": "UNUSED",
+        "enabled": false,
+        "data": {
+            "variants": [
+                {
+                    "name": "fire",
+                    "color": 16753920
+                },
+                {
+                    "name": "blue",
+                    "color": 2654676
+                },
+                {
+                    "name": "green",
+                    "color": 3329330
+                },
+                {
+                    "name": "purple",
+                    "color": 6950317
+                }
+            ]
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "DEMON_ONESIE",
+        "enabled": true,
+        "data": {
+            "face_outer": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "ESSENTIAL_CAP",
+        "enabled": true,
+        "data": {
+            "visor_front": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "PROPELLER_HAT",
+        "enabled": true,
+        "data": {
+            "visor": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "FEDORA",
+        "enabled": true,
+        "data": {
+            "brim": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "BOWLER",
+        "enabled": true,
+        "data": {
+            "brim": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SODA_HAT",
+        "enabled": true,
+        "data": {
+            "visor": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "CAP",
+        "enabled": true,
+        "data": {
+            "visor_front": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "MUSHROOM_CAP",
+        "enabled": true,
+        "data": {
+            "frills_1": true,
+            "frills_2": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "FROG_HAT",
+        "enabled": true,
+        "data": {
+            "brim": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SAMURAI_HELMET",
+        "enabled": true,
+        "data": {
+            "horns": true,
+            "visor": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "FIREFIGHTER_HELMET",
+        "enabled": true,
+        "data": {
+            "brim": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "PILOT_HAT",
+        "enabled": true,
+        "data": {
+            "visor": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "COLONIST_HAT",
+        "enabled": true,
+        "data": {
+            "brim": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "EMPLOYEE_HAT",
+        "enabled": true,
+        "data": {
+            "visor": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "STRAW_HAT",
+        "enabled": true,
+        "data": {
+            "brim": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "TOP_HAT",
+        "enabled": true,
+        "data": {
+            "brim": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "ARMY_HELMET",
+        "enabled": true,
+        "data": {
+            "brim": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "PIRATE_HAT",
+        "enabled": true,
+        "data": {
+            "cloth": true
+        }
+    }
+]

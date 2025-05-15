@@ -1,0 +1,36 @@
+[
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "TURTLE_ONESIE",
+        "enabled": true,
+        "data": {
+            "shell": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SPACE_SUIT",
+        "enabled": true,
+        "data": {
+            "backpack": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SCI_FI_MINING_SUIT",
+        "enabled": true,
+        "data": {
+            "backpack": true
+        }
+    },
+    {
+        "type": "REQUIRES_UNLOCK_ACTION",
+        "id": "UNUSED",
+        "enabled": true,
+        "data": {
+            "ACTION_TYPE": "JOIN_SPS",
+            "ACTION_DESCRIPTION": "Play 1.21.5 with a friend using\nEssential world hosting",
+            "REQUIRED_VERSION": "1.21.5"
+        }
+    }
+]

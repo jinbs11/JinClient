@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.fire_armor_helmet.emitter": {
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": {
+					"effect": "essential:helmet_embers",
+					"locator": "particle_source"
+				}
+			}
+		}
+	},
+	"triggers": [
+		{
+			"type": "IDLE",
+			"target": "ALL",
+			"name": "animation.fire_armor_helmet.emitter",
+			"probability": 1,
+			"priority": 1,
+			"skips": 0,
+			"loops": 1
+		}
+	]
+}

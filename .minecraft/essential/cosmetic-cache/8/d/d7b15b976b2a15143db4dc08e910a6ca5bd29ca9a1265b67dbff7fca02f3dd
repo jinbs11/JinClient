@@ -1,0 +1,80 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.demonic_overlord_helmet",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "demonic_overlord_helmet",
+					"parent": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 9, 8], "uv": [0, 0]},
+						{"origin": [-4, 23, -4], "size": [8, 10, 8], "inflate": 0.5, "uv": [0, 18]}
+					]
+				},
+				{
+					"name": "extra_upper",
+					"parent": "demonic_overlord_helmet",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-4, 33, -4],
+							"size": [8, 9, 8],
+							"uv": {
+								"north": {"uv": [21, 43], "uv_size": [8, 9]},
+								"east": {"uv": [13, 43], "uv_size": [8, 9]},
+								"south": {"uv": [37, 43], "uv_size": [8, 9]},
+								"west": {"uv": [29, 43], "uv_size": [8, 9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "horn_left",
+					"parent": "demonic_overlord_helmet",
+					"pivot": [4, 1, -1],
+					"cubes": [
+						{
+							"origin": [0, 25, -1],
+							"size": [12, 17, 0],
+							"uv": {
+								"north": {"uv": [0, 41], "uv_size": [12, 17]}
+							}
+						}
+					]
+				},
+				{
+					"name": "horn_right",
+					"parent": "demonic_overlord_helmet",
+					"pivot": [-4, 1, -1],
+					"cubes": [
+						{
+							"origin": [-12, 25, -1],
+							"size": [12, 17, 0],
+							"uv": {
+								"north": {"uv": [12, 41], "uv_size": [-12, 17]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+  "sound_definitions": {
+    "shred_sound": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/shred",
+          "is3D": true,
+          "interruptible": true
+        }
+      ]
+    }
+  }
+}

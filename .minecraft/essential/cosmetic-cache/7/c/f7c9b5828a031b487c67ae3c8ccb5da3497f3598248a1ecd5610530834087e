@@ -1,0 +1,26 @@
+{
+  "sound_definitions": {
+    "em_demon_hover_start": {
+      "category": "neutral",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/em_demon_hover_start",
+          "is3D": true,
+          "interruptible": true
+        }
+      ]
+    },
+    "em_demon_hover_loop": {
+      "category": "neutral",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/em_demon_hover_loop",
+          "is3D": true,
+          "interruptible": true
+        }
+      ]
+    }
+  }
+}

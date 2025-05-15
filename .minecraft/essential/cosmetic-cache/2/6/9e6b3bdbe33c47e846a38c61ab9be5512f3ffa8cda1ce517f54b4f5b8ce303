@@ -1,0 +1,192 @@
+[
+    {
+        "type": "ARMOR_HANDLING",
+        "id": "FIRE_HAIR",
+        "enabled": true,
+        "data": {
+            "head": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "SCARY_CLOWN_SUIT",
+        "enabled": true,
+        "data": {
+            "head": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "SSUNDEE_FOOT_ONESIE",
+        "enabled": true,
+        "data": {
+            "head": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "TIKI_MASK",
+        "enabled": true,
+        "data": {
+            "crown": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "HOLY_MASK",
+        "enabled": true,
+        "data": {
+            "wing_3": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "DINO_ONESIE",
+        "enabled": true,
+        "data": {
+            "spikes_head": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "RED_DINO_ONESIE",
+        "enabled": true,
+        "data": {
+            "spikes_head": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "DOLPHIN_ONESIE",
+        "enabled": true,
+        "data": {
+            "fin": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "JACK_O_LANTERN_SUIT",
+        "enabled": true,
+        "data": {
+            "stem": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SHARK_ONESIE",
+        "enabled": true,
+        "data": {
+            "fin": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "MECH_HELMET",
+        "enabled": true,
+        "data": {
+            "horn": true,
+            "center": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "MIXED_FIRE_ARMOR_HELMET",
+        "enabled": true,
+        "data": {
+            "extra_upper_left": true,
+            "extra_upper_right": true,
+            "fire_upper_left": true,
+            "fire_upper_right": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "FALLEN_ANGEL_HELMET",
+        "enabled": true,
+        "data": {
+            "extra_upper": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "FIRE_ARMOR_HELMET",
+        "enabled": true,
+        "data": {
+            "fire_upper": true,
+            "extra_upper": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "MAGMA_ARMOR_HELMET",
+        "enabled": true,
+        "data": {
+            "fire_upper": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "KNIGHT_HELMET",
+        "enabled": true,
+        "data": {
+            "feather": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "PUMPKIN_HEAD",
+        "enabled": true,
+        "data": {
+            "stem": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SAMURAI_HELMET",
+        "enabled": true,
+        "data": {
+            "horns": true
+        }
+    },
+    {
+        "type": "VARIANTS",
+        "id": "UNUSED",
+        "enabled": true,
+        "data": {
+            "variants": [
+                {
+                    "name": "fire",
+                    "color": 16753920
+                },
+                {
+                    "name": "soulfire",
+                    "color": 4511231
+                },
+                {
+                    "name": "purple",
+                    "color": 6950317
+                }
+            ]
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SKULL_MASK",
+        "enabled": true,
+        "data": {
+            "spikes": true
+        }
+    },
+    {
+        "type": "ARMOR_HANDLING_V2",
+        "id": "FIRE_HAIR_REMASTER",
+        "enabled": true,
+        "data": {
+            "conflicts": {
+                "hair": [
+                    3
+                ]
+            }
+        }
+    }
+]

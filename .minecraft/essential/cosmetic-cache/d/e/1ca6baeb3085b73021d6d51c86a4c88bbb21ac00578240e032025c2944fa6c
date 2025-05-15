@@ -1,0 +1,15 @@
+{
+  "sound_definitions": {
+    "fire_powers_sound": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/fire_powers",
+          "is3D": true,
+          "interruptible": true
+        }
+      ]
+    }
+  }
+}

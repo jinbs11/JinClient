@@ -1,0 +1,84 @@
+[
+    {
+        "type": "VARIANTS",
+        "id": "UNUSED",
+        "enabled": true,
+        "data": {
+            "variants": [
+                {
+                    "name": "fire",
+                    "color": 16753920
+                },
+                {
+                    "name": "blue",
+                    "color": 2654676
+                },
+                {
+                    "name": "green",
+                    "color": 3329330
+                },
+                {
+                    "name": "purple",
+                    "color": 6950317
+                }
+            ]
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SPACE_SUIT",
+        "enabled": true,
+        "data": {
+            "backpack": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SCI_FI_MINING_SUIT",
+        "enabled": true,
+        "data": {
+            "backpack": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "BANANA_PEEL",
+        "enabled": true,
+        "data": {
+            "peel_back": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "HOODIE",
+        "enabled": true,
+        "data": {
+            "hood": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SHINY_HOODIE",
+        "enabled": true,
+        "data": {
+            "hood": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "TURTLE_ONESIE",
+        "enabled": true,
+        "data": {
+            "shell": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "FIRE_ARMOR_REMASTER",
+        "enabled": true,
+        "data": {
+            "back_spikes_left": true,
+            "back_spikes_right": true
+        }
+    }
+]

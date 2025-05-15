@@ -1,0 +1,144 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.electric_guitar",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "side_left",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"side": "left"
+				},
+				{
+					"name": "guitar_left",
+					"parent": "side_left",
+					"pivot": [-2.5, 15, 4],
+					"rotation": [-180, 0, -135],
+					"side": "left",
+					"cubes": [
+						{"origin": [-7, 9, 3], "size": [9, 7, 3], "uv": [0, 16]},
+						{"origin": [-5, 12, 2], "size": [5, 1, 1], "uv": [28, 27]},
+						{"origin": [-6, 16, 3], "size": [7, 4, 3], "uv": [0, 27]},
+						{"origin": [-8, 17, 4.5], "size": [11, 7, 0], "uv": [0, 35]},
+						{"origin": [-4, 20, 3], "size": [3, 12, 1], "uv": [28, 7]}
+					]
+				},
+				{
+					"name": "neck_left",
+					"parent": "guitar_left",
+					"pivot": [-2.5, 30, 3],
+					"side": "left",
+					"cubes": [
+						{
+							"origin": [-6, 32, 3.5],
+							"size": [1, 6, 0],
+							"uv": {
+								"north": {"uv": [23, 35], "uv_size": [1, 6]}
+							}
+						},
+						{"origin": [-5, 32, 3], "size": [4, 6, 1], "uv": [28, 20]}
+					]
+				},
+				{
+					"name": "strings_left",
+					"parent": "guitar_left",
+					"pivot": [-2.5, 11, 2.5],
+					"rotation": [-1, 0, 0],
+					"side": "left",
+					"cubes": [
+						{
+							"origin": [-4, 13, 2.5],
+							"size": [1, 24, 0],
+							"uv": {
+								"north": {"uv": [39, 1], "uv_size": [1, 24]}
+							}
+						},
+						{
+							"origin": [-2, 13, 2.5],
+							"size": [1, 24, 0],
+							"uv": {
+								"north": {"uv": [39, 1], "uv_size": [1, 24]}
+							}
+						}
+					]
+				},
+				{
+					"name": "side_right",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"side": "right"
+				},
+				{
+					"name": "guitar_right",
+					"parent": "side_right",
+					"pivot": [2.5, 15, 4],
+					"rotation": [-180, 0, 135],
+					"side": "right",
+					"cubes": [
+						{"origin": [-2, 9, 3], "size": [9, 7, 3], "uv": [0, 16], "mirror": true},
+						{"origin": [0, 12, 2], "size": [5, 1, 1], "uv": [28, 27], "mirror": true},
+						{"origin": [-1, 16, 3], "size": [7, 4, 3], "uv": [0, 27], "mirror": true},
+						{"origin": [-3, 17, 4.5], "size": [11, 7, 0], "uv": [0, 35], "mirror": true},
+						{"origin": [1, 20, 3], "size": [3, 12, 1], "uv": [28, 7], "mirror": true}
+					]
+				},
+				{
+					"name": "neck_right",
+					"parent": "guitar_right",
+					"pivot": [2.5, 30, 3],
+					"side": "right",
+					"cubes": [
+						{
+							"origin": [5, 32, 3.5],
+							"size": [1, 6, 0],
+							"uv": {
+								"north": {"uv": [24, 35], "uv_size": [-1, 6]}
+							}
+						},
+						{"origin": [1, 32, 3], "size": [4, 6, 1], "uv": [28, 20], "mirror": true}
+					]
+				},
+				{
+					"name": "strings_right",
+					"parent": "guitar_right",
+					"pivot": [2.5, 11, 2.5],
+					"rotation": [-1, 0, 0],
+					"side": "right",
+					"cubes": [
+						{
+							"origin": [3, 13, 2.5],
+							"size": [1, 24, 0],
+							"uv": {
+								"north": {"uv": [40, 1], "uv_size": [-1, 24]}
+							}
+						},
+						{
+							"origin": [1, 13, 2.5],
+							"size": [1, 24, 0],
+							"uv": {
+								"north": {"uv": [40, 1], "uv_size": [-1, 24]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

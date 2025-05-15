@@ -1,0 +1,10 @@
+[
+  {
+    "id": "anime_powerup",
+    "type": "INTERRUPTS_EMOTE",
+    "enabled": true,
+    "data": {
+      "MOVEMENT": true
+    }
+  }
+]

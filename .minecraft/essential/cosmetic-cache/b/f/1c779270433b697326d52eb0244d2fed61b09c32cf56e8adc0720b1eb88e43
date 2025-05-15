@@ -1,0 +1,8 @@
+[
+    {
+        "type": "INTERRUPTS_EMOTE",
+        "id": "TAUNT_DANCE",
+        "enabled": true,
+        "data": {}
+    }
+]

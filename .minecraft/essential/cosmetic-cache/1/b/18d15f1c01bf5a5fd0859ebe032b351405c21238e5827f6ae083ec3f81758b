@@ -1,0 +1,15 @@
+{
+  "sound_definitions": {
+    "crafting_kadoosh_sound": {
+      "category": "neutral",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/crafting_kadoosh",
+          "is3D": true,
+          "interruptible": true
+        }
+      ]
+    }
+  }
+}

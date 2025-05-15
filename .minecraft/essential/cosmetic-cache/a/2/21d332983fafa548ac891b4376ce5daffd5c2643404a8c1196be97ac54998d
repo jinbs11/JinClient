@@ -1,0 +1,149 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.baby_pig",
+				"texture_width": 48,
+				"texture_height": 48,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "pet",
+					"parent": "head",
+					"pivot": [0, 32, 0]
+				},
+				{
+					"name": "pig_pet",
+					"parent": "pet",
+					"pivot": [0, 34, 0]
+				},
+				{
+					"name": "body_pet",
+					"parent": "pig_pet",
+					"pivot": [0, 34, 0],
+					"cubes": [
+						{"origin": [-2.5, 34, -3], "size": [5, 4, 6], "uv": [0, 11]}
+					]
+				},
+				{
+					"name": "head_pet",
+					"parent": "body_pet",
+					"pivot": [0, 38, -2],
+					"cubes": [
+						{"origin": [-1.5, 36, -7], "size": [3, 3, 1], "uv": [24, 7]},
+						{"origin": [-3.5, 36, -6], "size": [7, 6, 5], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "flower_pet",
+					"parent": "head_pet",
+					"pivot": [0, 42, -3.5],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{
+							"origin": [-3.5, 42, -3.5],
+							"size": [7, 6, 0],
+							"uv": {
+								"north": {"uv": [0, 26], "uv_size": [7, 6]}
+							}
+						},
+						{
+							"origin": [0, 42, -7],
+							"size": [0, 6, 7],
+							"uv": {
+								"east": {"uv": [0, 26], "uv_size": [7, 6]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ears",
+					"parent": "head_pet",
+					"pivot": [0, 41, -3.5]
+				},
+				{
+					"name": "ear_left",
+					"parent": "ears",
+					"pivot": [3.5, 41, -4.5],
+					"rotation": [0, 0, -22.5],
+					"cubes": [
+						{"origin": [3, 37, -5], "size": [1, 4, 3], "uv": [24, 0]}
+					]
+				},
+				{
+					"name": "ear_right",
+					"parent": "ears",
+					"pivot": [-3.5, 41, -4.5],
+					"rotation": [0, 0, 22.5],
+					"cubes": [
+						{"origin": [-4, 37, -5], "size": [1, 4, 3], "uv": [32, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "tail_pet",
+					"parent": "body_pet",
+					"pivot": [0, 36, 3],
+					"cubes": [
+						{
+							"origin": [0, 35, 3],
+							"size": [0, 4, 4],
+							"uv": {
+								"west": {"uv": [17, 12], "uv_size": [4, 4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "legs_pet",
+					"parent": "pig_pet",
+					"pivot": [0, 34, 0.5]
+				},
+				{
+					"name": "leg_pet_front_left",
+					"parent": "legs_pet",
+					"pivot": [1.5, 34, -1],
+					"cubes": [
+						{"origin": [0, 32, -2], "size": [2, 2, 2], "uv": [0, 21]}
+					]
+				},
+				{
+					"name": "leg_pet_front_right",
+					"parent": "legs_pet",
+					"pivot": [-1.5, 34, -1],
+					"cubes": [
+						{"origin": [-2, 32, -2], "size": [2, 2, 2], "uv": [16, 21], "mirror": true}
+					]
+				},
+				{
+					"name": "leg_pet_back_left",
+					"parent": "legs_pet",
+					"pivot": [1.5, 34, 2],
+					"cubes": [
+						{"origin": [0, 32, 1], "size": [2, 2, 2], "uv": [8, 21]}
+					]
+				},
+				{
+					"name": "leg_pet_back_right",
+					"parent": "legs_pet",
+					"pivot": [-1.5, 34, 2],
+					"cubes": [
+						{"origin": [-2, 32, 1], "size": [2, 2, 2], "uv": [24, 21], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

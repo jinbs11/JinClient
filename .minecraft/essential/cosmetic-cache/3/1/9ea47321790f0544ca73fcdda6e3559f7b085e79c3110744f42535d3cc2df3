@@ -1,0 +1,115 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.enderman_takeover",
+				"texture_width": 80,
+				"texture_height": 80,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "enderman_takeover_body_side_left",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"side": "left",
+					"cubes": [
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "uv": [0, 34]}
+					]
+				},
+				{
+					"name": "enderman_takeover_body_side_right",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"side": "right",
+					"cubes": [
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "uv": [0, 34], "mirror": true}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "enderman_takeover_head_side_left",
+					"parent": "head",
+					"pivot": [0, 0, 0],
+					"side": "left",
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "enderman_takeover_head_side_right",
+					"parent": "head",
+					"pivot": [0, 0, 0],
+					"side": "right",
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "arm_right",
+					"parent": "root",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "enderman_takeover_arm_side_right",
+					"parent": "arm_right",
+					"pivot": [0, 0, 0],
+					"side": "right",
+					"cubes": [
+						{
+							"origin": [-7, 12, -2],
+							"size": [3, 12, 4],
+							"uv": {
+								"north": {"uv": [40, 21], "uv_size": [-3, 12]},
+								"east": {"uv": [45, 21], "uv_size": [-4, 12]},
+								"south": {"uv": [49, 21], "uv_size": [-3, 12]},
+								"west": {"uv": [37, 21], "uv_size": [-4, 12]},
+								"up": {"uv": [40, 17], "uv_size": [-3, 4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "arm_left",
+					"parent": "root",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "enderman_takeover_arm_side_left",
+					"parent": "arm_left",
+					"pivot": [0, 0, 0],
+					"side": "left",
+					"cubes": [
+						{
+							"origin": [4, 12, -2],
+							"size": [3, 12, 4],
+							"uv": {
+								"north": {"uv": [37, 21], "uv_size": [3, 12]},
+								"east": {"uv": [33, 21], "uv_size": [4, 12]},
+								"south": {"uv": [46, 21], "uv_size": [3, 12]},
+								"west": {"uv": [41, 21], "uv_size": [4, 12]},
+								"up": {"uv": [37, 17], "uv_size": [3, 4]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

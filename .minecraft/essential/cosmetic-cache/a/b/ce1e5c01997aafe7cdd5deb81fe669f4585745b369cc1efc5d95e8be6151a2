@@ -1,0 +1,61 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.demon_horns",
+				"texture_width": 48,
+				"texture_height": 48,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "demon_horns",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "demon_horn_left_1",
+					"parent": "demon_horns",
+					"pivot": [4, 32, -4],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{
+							"origin": [4, 25, -9],
+							"size": [0, 16, 11],
+							"uv": {
+								"west": {"uv": [0, 0], "uv_size": [11, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "demon_horn_right_1",
+					"parent": "demon_horns",
+					"pivot": [-4, 32, -4],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{
+							"origin": [-4, 25, -9],
+							"size": [0, 16, 11],
+							"uv": {
+								"east": {"uv": [11, 0], "uv_size": [-11, 16]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

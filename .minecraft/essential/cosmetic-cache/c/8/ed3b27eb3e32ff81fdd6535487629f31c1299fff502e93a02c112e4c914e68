@@ -1,0 +1,96 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sorcerer_cone",
+				"texture_width": 80,
+				"texture_height": 80,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 6.5,
+				"visible_bounds_offset": [0, 2.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "wizard_hat",
+					"parent": "head",
+					"pivot": [0, 30, 0],
+					"rotation": [-15, 0, 0],
+					"cubes": [
+						{"origin": [-5, 30, -5], "size": [10, 5, 10], "inflate": 0.02, "uv": [0, 21]},
+						{
+							"origin": [-6, 30, -11],
+							"size": [12, 0, 22],
+							"uv": {
+								"up": {"uv": [37, 0], "uv_size": [12, 22]}
+							}
+						}
+					]
+				},
+				{
+					"name": "cone_1",
+					"parent": "wizard_hat",
+					"pivot": [0, 35, -3],
+					"rotation": [-30, 0, 0],
+					"cubes": [
+						{"origin": [-3, 35, -3], "size": [6, 9, 6], "inflate": 0.02, "uv": [40, 22]}
+					]
+				},
+				{
+					"name": "cone_2",
+					"parent": "cone_1",
+					"pivot": [0, 44, 0],
+					"cubes": [
+						{
+							"origin": [0, 34, -3],
+							"size": [0, 16, 22],
+							"inflate": 0.02,
+							"uv": {
+								"west": {"uv": [0, 37], "uv_size": [22, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "brim_1",
+					"parent": "wizard_hat",
+					"pivot": [6, 30, 0],
+					"rotation": [0, 0, 22.5],
+					"cubes": [
+						{
+							"origin": [6, 30, -11],
+							"size": [5, 0, 22],
+							"uv": {
+								"up": {"uv": [49, 0], "uv_size": [5, 22]}
+							}
+						}
+					]
+				},
+				{
+					"name": "brim_2",
+					"parent": "wizard_hat",
+					"pivot": [-6, 30, 0],
+					"rotation": [0, 0, -22.5],
+					"cubes": [
+						{
+							"origin": [-11, 30, -11],
+							"size": [5, 0, 22],
+							"uv": {
+								"up": {"uv": [32, 0], "uv_size": [5, 22]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

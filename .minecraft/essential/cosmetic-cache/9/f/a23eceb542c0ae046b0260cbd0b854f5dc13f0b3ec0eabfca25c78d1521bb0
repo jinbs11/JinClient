@@ -1,0 +1,84 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.little_demonic_overlord_wings",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "wing_left_1",
+					"parent": "body",
+					"pivot": [2, 21, 2],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{
+							"origin": [2, 17, 2],
+							"size": [5, 11, 0],
+							"uv": {
+								"south": {"uv": [12, 6], "uv_size": [5, 11]}
+							}
+						}
+					]
+				},
+				{
+					"name": "wing_left_2",
+					"parent": "wing_left_1",
+					"pivot": [7, 25, 2],
+					"cubes": [
+						{
+							"origin": [7, 17, 2],
+							"size": [8, 11, 0],
+							"uv": {
+								"south": {"uv": [4, 6], "uv_size": [8, 11]}
+							}
+						}
+					]
+				},
+				{
+					"name": "wing_right_1",
+					"parent": "body",
+					"pivot": [-2, 21, 2],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{
+							"origin": [-7, 17, 2],
+							"size": [5, 11, 0],
+							"uv": {
+								"south": {"uv": [17, 6], "uv_size": [-5, 11]}
+							}
+						}
+					]
+				},
+				{
+					"name": "wing_right_2",
+					"parent": "wing_right_1",
+					"pivot": [-7, 25, 2],
+					"cubes": [
+						{
+							"origin": [-15, 17, 2],
+							"size": [8, 11, 0],
+							"uv": {
+								"south": {"uv": [12, 6], "uv_size": [-8, 11]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

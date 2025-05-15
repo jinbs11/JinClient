@@ -1,21 +1,30 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
 import { Client } from 'minecraft-launcher-core';
+import { randomUUID } from 'crypto';
+import { getLastUsedUser } from '../server/userHandler.js';
 
 export function launchMinecraft() {
+  const user = getLastUsedUser();
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
 
   const forgePath = path.join(__dirname, '..', '.minecraft', 'versions', 'forge-1.8.9.jar');
+  const client_token = randomUUID();
   const launcher = new Client();
+
+  if (!user) {
+    console.error("❌ Ei käyttäjää tietokannassa!");
+    return;
+  }
 
   const opts = {
     authorization: {
-      access_token: '123456789',
-      client_token: 'abcdefg',
-      uuid: 'offline-user',
-      name: 'OfflineUser',
-      user_properties: '{}',
+      access_token: user.access_token,
+      client_token: client_token,
+      uuid: user.uuid,
+      name: user.name,
+      user_properties: user.user_properties || '{}',
       meta: {
         type: 'mojang'
       }

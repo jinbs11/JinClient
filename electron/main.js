@@ -7,6 +7,7 @@ import followRedirects from 'follow-redirects';
 import { execFile } from 'child_process';
 const https = followRedirects.https;
 import { launchMinecraft } from './launcher.js';
+import '../server/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -66,6 +67,9 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.js'),
     },
   });
+
+  win.setMenuBarVisibility(false);
+  win.removeMenu();
 
   win.loadURL('http://localhost:5173');
 }

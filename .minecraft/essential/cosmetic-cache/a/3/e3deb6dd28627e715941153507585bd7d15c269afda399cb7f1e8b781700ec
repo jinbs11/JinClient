@@ -1,0 +1,15 @@
+{
+	"sound_definitions": {
+		"boba_sip": {
+			"category": "neutral",
+			"max_distance": 32,
+			"sounds": [
+				{
+					"name": "sounds/boba_sip",
+					"is3D": true,
+					"interruptible": true
+				}
+			]
+		}
+	}
+}

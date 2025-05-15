@@ -1,0 +1,50 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "essential:fire_muzzle",
+			"basic_render_parameters": {
+				"material": "particles_add",
+				"texture": "textures/blocks/wool_colored_white"
+			}
+		},
+		"components": {
+			"minecraft:emitter_local_space": {
+				"position": true,
+				"rotation": true
+			},
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 8,
+				"max_particles": 100
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 0.5
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": [0, -0.5, 0]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 0.06
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": 90
+			},
+			"minecraft:particle_initial_speed": 0,
+			"minecraft:particle_motion_dynamic": {},
+			"minecraft:particle_appearance_billboard": {
+				"size": [0.6, 0.6],
+				"facing_camera_mode": "lookat_direction",
+				"direction": {
+					"mode": "custom",
+					"custom_direction": [0, 1, 0]
+				},
+				"uv": {
+					"texture_width": 146,
+					"texture_height": 520,
+					"uv": [80, "math.round(variable.particle_random_1*3)*15"],
+					"uv_size": [15, 15]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.long_beard",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "beard",
+					"parent": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-4, 24, -4],
+							"size": [8, 7, 8],
+							"inflate": 0.025,
+							"uv": {
+								"north": {"uv": [8, 26], "uv_size": [8, 7]},
+								"east": {"uv": [0, 26], "uv_size": [8, 7]},
+								"west": {"uv": [16, 26], "uv_size": [8, 7]},
+								"down": {"uv": [16, 25], "uv_size": [8, -8]}
+							}
+						},
+						{
+							"origin": [-4.025, 16.925, -4.025],
+							"size": [8.05, 7.05, 2.025],
+							"uv": {
+								"north": {"uv": [35, 17], "uv_size": [8, 7]},
+								"east": {"uv": [33, 17], "uv_size": [2, 7]},
+								"west": {"uv": [43, 17], "uv_size": [2, 7]}
+							}
+						},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.5, "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

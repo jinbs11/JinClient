@@ -1,5 +1,6 @@
 // MicrosoftAuth.js
 import fetch from 'node-fetch';
+import { saveUserToDB } from './userHandler.js';
 
 class MicrosoftAuth {
   constructor(options = {}) {
@@ -135,13 +136,23 @@ class MicrosoftAuth {
     const json = await res.json();
     console.log("🎮 Minecraft profile data:", json);
 
-    return {
+    const profile = {
       refresh_token: this.options.refresh_token,
       access_token: this.xboxLogin.access_token,
       uuid: json.id,
-      name: json.name
+      name: json.name,
+      user_properties: {} // voit laajentaa myöhemmin
     };
+
+    // 🔥 Tallenna käyttäjä tietokantaan
+    saveUserToDB(profile);
+    console.log(`💾 Käyttäjä tallennettu tietokantaan: ${profile.name} (${profile.uuid})`);
+
+    return profile;
   }
+
+
+
 }
 
 export default MicrosoftAuth;

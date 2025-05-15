@@ -1,0 +1,269 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.emitter": {
+			"animation_length": 10,
+			"bones": {
+				"fish": {
+					"relative_to": {
+						"rotation": "world"
+					}
+				},
+				"fish_1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"10.0": {"pre": [0, 720, 0], "post": [0, 0, 0]}
+					},
+					"position": [0, 0, 0]
+				},
+				"fish_1_body_orbit": {
+					"position": [11, 7, 0]
+				},
+				"fish_1_body_main": {
+					"rotation": [0, "math.sin(query.anim_time*360)*5", 0],
+					"position": ["math.sin(80+query.anim_time*360)", "math.sin(query.anim_time*36)*5", 0]
+				},
+				"fish_1_fin_tail": {
+					"rotation": [0, "math.sin(query.anim_time*360)*10", "math.sin(80+query.anim_time*360)*5"]
+				},
+				"fish_1_fin_left": {
+					"rotation": [0, "-75+math.sin(60+query.anim_time*360*2)*10", 0]
+				},
+				"fish_1_fin_right": {
+					"rotation": [0, "75-math.sin(60+query.anim_time*360*2)*10", 0]
+				},
+				"fish_2": {
+					"rotation": {
+						"0.0": [0, 40, 0],
+						"10.0": {"pre": [0, -680, 0], "post": [0, 40, 0]}
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"10.0": [0, 0, 0]
+					}
+				},
+				"fish_2_body_orbit": {
+					"position": {
+						"0.0": {
+							"post": [-14, 8, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"4.0": {
+							"post": [-17, 8, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"7.0": {
+							"post": [-14, 8, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"8.125": {
+							"post": [-17, 8, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"10.0": {
+							"post": [-14, 8, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"fish_2_body_main": {
+					"rotation": [0, "math.sin(query.anim_time*360)*10", 0],
+					"position": ["math.sin(80+query.anim_time*360)", "-math.sin(query.anim_time*36)*5", 0]
+				},
+				"fish_2_fin_left": {
+					"rotation": [0, "-75+math.sin(60+query.anim_time*360*2)*10", 0]
+				},
+				"fish_2_fin_right": {
+					"rotation": [0, "75-math.sin(60+query.anim_time*360*2)*10", 0]
+				},
+				"fish_2_fin_tail": {
+					"rotation": [0, "math.sin(query.anim_time*360)*10", "math.sin(80+query.anim_time*360)*5"]
+				},
+				"fish_3": {
+					"rotation": {
+						"0.0": [0, 130, 0],
+						"10.0": {"pre": [0, 850, 0], "post": [0, 130, 0]}
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"10.0": [0, 0, 0]
+					}
+				},
+				"fish_3_body_orbit": {
+					"position": [11, 18, 0]
+				},
+				"fish_3_body_main": {
+					"rotation": [0, "math.sin(50+query.anim_time*360)*10", 0],
+					"position": ["math.sin(80+query.anim_time*360)", "math.sin(query.anim_time*36)*5", 0]
+				},
+				"fish_3_fin_tail": {
+					"rotation": [0, "math.sin(query.anim_time*360)*10", "math.sin(80+query.anim_time*360)*5"]
+				},
+				"fish_3_fin_left": {
+					"rotation": [0, "-75+math.sin(60+query.anim_time*360*2)*10", 0]
+				},
+				"fish_3_fin_right": {
+					"rotation": [0, "75-math.sin(60+query.anim_time*360*2)*10", 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "essential:ocean_aura_bubbles"
+					},
+					{
+						"effect": "essential:ocean_aura_fish_trail",
+						"locator": "particle_source_1"
+					},
+					{
+						"effect": "essential:ocean_aura_fish_trail",
+						"locator": "particle_source_2"
+					},
+					{
+						"effect": "essential:ocean_aura_fish_trail",
+						"locator": "particle_source_3"
+					}
+				],
+				"0.0625": {
+					"effect": "essential:ocean_aura_sparkles"
+				}
+			}
+		},
+		"animation.player.loop": {
+			"loop": true,
+			"animation_length": 10,
+			"bones": {
+				"fish": {
+					"relative_to": {
+						"rotation": "world"
+					}
+				},
+				"fish_1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"10.0": {
+							"pre": [0, 720, 0],
+							"post": [0, 0, 0]
+						}
+					},
+					"position": [0, 0, 0]
+				},
+				"fish_1_body_orbit": {
+					"position": [11, 7, 0]
+				},
+				"fish_1_fin_left": {
+					"rotation": [0, "-75+math.sin(60+query.anim_time*360*2)*10", 0]
+				},
+				"fish_1_fin_right": {
+					"rotation": [0, "75-math.sin(60+query.anim_time*360*2)*10", 0]
+				},
+				"fish_2": {
+					"rotation": {
+						"0.0": [0, 40, 0],
+						"10.0": {
+							"pre": [0, -680, 0],
+							"post": [0, 40, 0]
+						}
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"10.0": [0, 0, 0]
+					}
+				},
+				"fish_2_body_orbit": {
+					"position": {
+						"0.0": {
+							"post": [-14, 8, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"4.0": {
+							"post": [-17, 8, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"7.0": {
+							"post": [-14, 8, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"8.125": {
+							"post": [-17, 8, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"10.0": {
+							"post": [-14, 8, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"fish_2_fin_left": {
+					"rotation": [0, "-75+math.sin(60+query.anim_time*360*2)*10", 0]
+				},
+				"fish_2_fin_right": {
+					"rotation": [0, "75-math.sin(60+query.anim_time*360*2)*10", 0]
+				},
+				"fish_3": {
+					"rotation": {
+						"0.0": [0, 130, 0],
+						"10.0": {
+							"pre": [0, 850, 0],
+							"post": [0, 130, 0]
+						}
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"10.0": [0, 0, 0]
+					}
+				},
+				"fish_3_body_orbit": {
+					"position": [11, 18, 0]
+				},
+				"fish_3_fin_left": {
+					"rotation": [0, "-75+math.sin(60+query.anim_time*360*2)*10", 0]
+				},
+				"fish_3_fin_right": {
+					"rotation": [0, "75-math.sin(60+query.anim_time*360*2)*10", 0]
+				},
+				"fish_1_body_main": {
+					"rotation": [0, "math.sin(query.anim_time*360)*5", 0],
+					"position": ["math.sin(80+query.anim_time*360)", "math.sin(query.anim_time*36)*5", 0]
+				},
+				"fish_1_fin_tail": {
+					"rotation": [0, "math.sin(query.anim_time*360)*10", "math.sin(80+query.anim_time*360)*5"]
+				},
+				"fish_2_body_main": {
+					"rotation": [0, "math.sin(query.anim_time*360)*10", 0],
+					"position": ["math.sin(80+query.anim_time*360)", "-math.sin(query.anim_time*36)*5", 0]
+				},
+				"fish_2_fin_tail": {
+					"rotation": [0, "math.sin(query.anim_time*360)*10", "math.sin(80+query.anim_time*360)*5"]
+				},
+				"fish_3_body_main": {
+					"rotation": [0, "math.sin(50+query.anim_time*360)*10", 0],
+					"position": ["math.sin(80+query.anim_time*360)", "math.sin(query.anim_time*36)*5", 0]
+				},
+				"fish_3_fin_tail": {
+					"rotation": [0, "math.sin(query.anim_time*360)*10", "math.sin(80+query.anim_time*360)*5"]
+				}
+			}
+		}
+	},
+	"triggers": [
+		{
+			"type": "IDLE",
+			"target": "ALL",
+			"name": "animation.player.emitter",
+			"probability": 1,
+			"priority": 1,
+			"skips": 0,
+			"loops": 1,
+			"on_complete": {
+				"type": "IDLE",
+				"target": "ALL",
+				"name": "animation.player.loop",
+				"probability": 1,
+				"priority": 1,
+				"skips": 0,
+				"loops": 0
+			}
+		}
+	]
+}

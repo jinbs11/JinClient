@@ -1,0 +1,212 @@
+[
+    {
+        "type": "ARMOR_HANDLING",
+        "id": "ENDER_ENTITY_BODY",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "VARIANTS",
+        "id": "UNUSED",
+        "enabled": true,
+        "data": {
+            "variants": [
+                {
+                    "name": "purple",
+                    "color": 9717421
+                },
+                {
+                    "name": "red",
+                    "color": 14024704
+                },
+                {
+                    "name": "blue",
+                    "color": 3367607
+                },
+                {
+                    "name": "pink",
+                    "color": 16732337
+                }
+            ]
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "GRUNGE_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "BUTTON_UP_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "PAJAMA_TOP",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "FIRE_T_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "HAWAII_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "HEART_T_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "HOODIE",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "SHINY_HOODIE",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "CAMO_HOODIE",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "BASKETBALL_JERSEY",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "UGLY_SWEATER",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "MYSTICAL_HOOD",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "CREEPER_TAKEOVER",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "ENDERMAN_TAKEOVER",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "GIANT_EYE_TAKEOVER",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "WARDEN_TAKEOVER",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "SCARY_FACE_TAKEOVER",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "T_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "MINECRAFT_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    }
+]

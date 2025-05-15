@@ -1,0 +1,204 @@
+[
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "GRUNGE_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "T_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "BUTTON_UP_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "PAJAMA_TOP",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "FIRE_T_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "HAWAII_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "HEART_T_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "HOODIE",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "SHINY_HOODIE",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "CAMO_HOODIE",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "BASKETBALL_JERSEY",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "SKIRT",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "SHORTS",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "BLING_CHAIN",
+        "enabled": true,
+        "data": {
+            "t_shirt": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SHINY_PANTS",
+        "enabled": true,
+        "data": {
+            "body_outer": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "FLOWER_LEGS",
+        "enabled": true,
+        "data": {
+            "leaf_left": true,
+            "leaf_right": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "GIANT_BOWTIE",
+        "enabled": true,
+        "data": {}
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "UGLY_SWEATER",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "MYSTICAL_HOOD",
+        "enabled": true,
+        "data": {
+            "body_outer": true,
+            "arm_left_outer": true,
+            "arm_right_outer": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "MINECRAFT_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "ARMOR_HANDLING",
+        "id": "MAID_OUTFIT",
+        "enabled": false,
+        "data": {}
+    },
+    {
+        "type": "ARMOR_HANDLING_V2",
+        "id": "MAID_OUTFIT",
+        "enabled": true,
+        "data": {
+            "conflicts": {
+                "skirt": [
+                    1
+                ]
+            }
+        }
+    }
+]

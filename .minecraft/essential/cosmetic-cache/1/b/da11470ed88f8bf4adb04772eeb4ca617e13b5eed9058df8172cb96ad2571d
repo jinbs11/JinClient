@@ -1,0 +1,50 @@
+{
+	"sound_definitions": {
+		"clap": {
+			"category": "neutral",
+			"max_distance": 32,
+			"sounds": [
+				{
+					"name": "sounds/clap1",
+					"is3D": true,
+					"interruptible": true
+				},
+				{
+					"name": "sounds/clap2",
+					"is3D": true,
+					"interruptible": true
+				},
+				{
+					"name": "sounds/clap3",
+					"is3D": true,
+					"interruptible": true
+				},
+				{
+					"name": "sounds/clap4",
+					"is3D": true,
+					"interruptible": true
+				},
+				{
+					"name": "sounds/clap5",
+					"is3D": true,
+					"interruptible": true
+				},
+				{
+					"name": "sounds/clap6",
+					"is3D": true,
+					"interruptible": true
+				},
+				{
+					"name": "sounds/clap7",
+					"is3D": true,
+					"interruptible": true
+				},
+				{
+					"name": "sounds/clap8",
+					"is3D": true,
+					"interruptible": true
+				}
+			]
+		}
+	}
+}

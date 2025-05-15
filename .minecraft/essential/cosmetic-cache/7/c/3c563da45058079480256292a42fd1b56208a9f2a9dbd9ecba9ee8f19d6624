@@ -1,0 +1,26 @@
+{
+  "sound_definitions": {
+    "fire_hover_pre_sound": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/fire_hover_pre",
+          "is3D": true,
+          "interruptible": true
+        }
+      ]
+    },
+    "fire_hover_loop_sound": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/fire_hover_loop",
+          "is3D": true,
+          "interruptible": true
+        }
+      ]
+    }
+  }
+}

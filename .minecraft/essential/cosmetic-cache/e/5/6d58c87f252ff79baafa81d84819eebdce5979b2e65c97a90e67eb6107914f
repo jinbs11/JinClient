@@ -1,0 +1,194 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.fire_armor_helmet_remaster",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "fire_armor_helmet",
+					"parent": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 9, 8], "uv": [36, 68]},
+						{
+							"origin": [-4, 24, 4],
+							"size": [0, 10, 5],
+							"uv": {
+								"east": {"uv": [80, 68], "uv_size": [-5, 10]}
+							}
+						},
+						{"origin": [-4, 23, -4], "size": [8, 10, 8], "inflate": 0.5, "uv": [36, 86]}
+					]
+				},
+				{
+					"name": "fire_upper",
+					"parent": "fire_armor_helmet",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "fire_upper_front",
+					"parent": "fire_upper",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [0, 25, -4],
+							"size": [0, 17, 16],
+							"uv": {
+								"west": {"uv": [76, 28], "uv_size": [16, 17]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fire_upper_back",
+					"parent": "fire_upper",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [0, 25, -4],
+							"size": [0, 17, 16],
+							"uv": {
+								"west": {"uv": [76, 0], "uv_size": [16, 17]}
+							}
+						}
+					]
+				},
+				{
+					"name": "extra_back",
+					"parent": "fire_armor_helmet",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [4, 24, 4],
+							"size": [0, 10, 5],
+							"uv": {
+								"west": {"uv": [75, 68], "uv_size": [5, 10]}
+							}
+						}
+					]
+				},
+				{
+					"name": "extra_left",
+					"parent": "fire_armor_helmet",
+					"pivot": [4, 29, -4],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{
+							"origin": [4, 24, -4],
+							"size": [3, 11, 0],
+							"uv": {
+								"north": {"uv": [69, 68], "uv_size": [3, 11]}
+							}
+						}
+					]
+				},
+				{
+					"name": "extra_right",
+					"parent": "fire_armor_helmet",
+					"pivot": [-4, 29, -4],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{
+							"origin": [-7, 24, -4],
+							"size": [3, 11, 0],
+							"uv": {
+								"north": {"uv": [72, 68], "uv_size": [-3, 11]}
+							}
+						}
+					]
+				},
+				{
+					"name": "extra_upper",
+					"parent": "fire_armor_helmet",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-4, 33, -4],
+							"size": [8, 9, 8],
+							"uv": {
+								"north": {"uv": [57, 111], "uv_size": [8, 9]},
+								"east": {"uv": [49, 111], "uv_size": [8, 9]},
+								"south": {"uv": [73, 111], "uv_size": [8, 9]},
+								"west": {"uv": [65, 111], "uv_size": [8, 9]}
+							}
+						}
+					]
+				},
+				{
+					"name": "flames",
+					"parent": "fire_armor_helmet",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "flames_left",
+					"parent": "flames",
+					"pivot": [4, 24, 0],
+					"rotation": [0, 0, -65],
+					"cubes": [
+						{
+							"origin": [4, 24, -5],
+							"size": [8, 0, 10],
+							"uv": {
+								"up": {"uv": [93, 0], "uv_size": [8, 10]}
+							}
+						}
+					]
+				},
+				{
+					"name": "flames_right",
+					"parent": "flames",
+					"pivot": [-4, 24, 0],
+					"rotation": [0, 0, 65],
+					"cubes": [
+						{
+							"origin": [-12, 24, -5],
+							"size": [8, 0, 10],
+							"uv": {
+								"up": {"uv": [101, 0], "uv_size": [-8, 10]}
+							}
+						}
+					]
+				},
+				{
+					"name": "flames_back",
+					"parent": "flames",
+					"pivot": [0, 24, 4],
+					"rotation": [65, 0, 0],
+					"cubes": [
+						{
+							"origin": [-5, 24, 4],
+							"size": [10, 0, 8],
+							"uv": {
+								"up": {"uv": [106, 5], "uv_size": [10, 8]}
+							}
+						}
+					]
+				},
+				{
+					"name": "particle_source",
+					"parent": "fire_armor_helmet",
+					"pivot": [0, 33, 3],
+					"locators": {
+						"particle_source": [0, 33, 3]
+					}
+				}
+			]
+		}
+	]
+}

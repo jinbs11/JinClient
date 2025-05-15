@@ -1,0 +1,469 @@
+[
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "GRUNGE_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "T_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "BUTTON_UP_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "PAJAMA_TOP",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "FIRE_T_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "HAWAII_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "HEART_T_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "HOODIE",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "SHINY_HOODIE",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "CAMO_HOODIE",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "BASKETBALL_JERSEY",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "PANTS",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "BASKETBALL_SHORTS",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "SHINY_PANTS",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "SKIRT",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "FIRE_PANTS",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "PAJAMA_PANTS",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "FLOWER_LEGS",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "CAMO_PANTS",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "NEON_RGB_PANTS",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "SHORTS",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "VEST",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "LUXURY_SUIT_VEST",
+        "enabled": true,
+        "data": {
+            "head": true,
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    },
+    {
+        "type": "VARIANTS",
+        "id": "UNUSED",
+        "enabled": true,
+        "data": {
+            "variants": [
+                {
+                    "name": "fire",
+                    "color": 16747008
+                },
+                {
+                    "name": "soul_fire",
+                    "color": 2031613
+                },
+                {
+                    "name": "purple",
+                    "color": 10356223
+                }
+            ]
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "UGLY_SWEATER",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "MINECRAFT_SHIRT",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "BITZEL_SOCK_MONKEY",
+        "enabled": true,
+        "data": {
+            "arms": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "MASHCLASH_SHOULDER_YETI",
+        "enabled": true,
+        "data": {
+            "arms": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "PLUSHIE_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "REINDEER_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "TEDDY_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "OUTDOOR_RUCKSACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "EVERYDAY_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "FANCY_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "HIKING_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "JETPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "HACKER_JETPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "DRAGON_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "DOG_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "MONKEY_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "ELEPHANT_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "MICHAELMCCHILL_ALESA_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "SCI_FI_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "TURTLE_BACKPACK",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "MONEY_BACKPACK_OVERWORLD",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "MONEY_BACKPACK_UNDERWORLD",
+        "enabled": true,
+        "data": {
+            "straps": true
+        }
+    },
+    {
+        "type": "COSMETIC_BONE_HIDING",
+        "id": "BLING_CHAIN",
+        "enabled": true,
+        "data": {
+            "body": true
+        }
+    },
+    {
+        "type": "ARMOR_HANDLING_V2",
+        "id": "FIRE_ARMOR_REMASTER",
+        "enabled": true,
+        "data": {
+            "conflicts": {
+                "back_spikes_right": [
+                    2
+                ],
+                "back_spikes_left": [
+                    2
+                ]
+            }
+        }
+    },
+    {
+        "type": "ARMOR_HANDLING",
+        "id": "FIRE_ARMOR_REMASTER",
+        "enabled": false,
+        "data": {
+            "arms": true,
+            "body": true,
+            "legs": true
+        }
+    }
+]

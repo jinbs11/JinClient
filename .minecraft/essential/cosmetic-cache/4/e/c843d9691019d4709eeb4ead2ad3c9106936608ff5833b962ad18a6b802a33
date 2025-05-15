@@ -1,0 +1,8 @@
+[
+    {
+        "type": "INTERRUPTS_EMOTE",
+        "id": "moon_goddess",
+        "enabled": true,
+        "data": {}
+    }
+]

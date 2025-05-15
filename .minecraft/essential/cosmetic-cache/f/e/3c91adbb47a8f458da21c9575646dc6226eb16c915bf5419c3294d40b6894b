@@ -1,0 +1,10 @@
+[
+    {
+        "type": "INTERRUPTS_EMOTE",
+        "id": "fire_breather",
+        "enabled": true,
+        "data": {
+            "MOVEMENT": true
+        }
+    }
+]

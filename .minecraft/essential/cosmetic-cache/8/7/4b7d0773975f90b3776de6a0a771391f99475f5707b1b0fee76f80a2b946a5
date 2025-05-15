@@ -1,0 +1,76 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.messy_bun",
+				"texture_width": 80,
+				"texture_height": 80,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hair",
+					"parent": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-4, 18, -4],
+							"size": [8, 6, 8],
+							"inflate": 0.03,
+							"uv": {
+								"east": {"uv": [0, 59], "uv_size": [8, 6]},
+								"west": {"uv": [16, 59], "uv_size": [8, 6]}
+							}
+						},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [37, 0]}
+					]
+				},
+				{
+					"name": "bun",
+					"parent": "hair",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-2, 23, 3], "size": [4, 11, 4], "uv": [0, 0]},
+						{
+							"origin": [-2, 19, 3],
+							"size": [4, 4, 4],
+							"uv": {
+								"north": {"uv": [22, 4], "uv_size": [4, 4]},
+								"east": {"uv": [18, 4], "uv_size": [4, 4]},
+								"south": {"uv": [30, 4], "uv_size": [4, 4]},
+								"west": {"uv": [26, 4], "uv_size": [4, 4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outer",
+					"parent": "hair",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-4, 24, -4],
+							"size": [8, 8, 8],
+							"inflate": 0.5,
+							"uv": {
+								"north": {"uv": [8, 26], "uv_size": [8, 8]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,41 @@
+{
+  "sound_definitions": {
+    "em_fire_breather_start": {
+      "category": "neutral",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/em_fire_breather_start",
+          "is3D": true,
+          "interruptible": true
+        }
+      ]
+    },
+    "em_fire_breather_loop": {
+      "category": "neutral",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/em_fire_breather_loop1",
+          "is3D": true,
+          "interruptible": true
+        },
+        {
+          "name": "sounds/em_fire_breather_loop2",
+          "is3D": true,
+          "interruptible": true
+        },
+        {
+          "name": "sounds/em_fire_breather_loop3",
+          "is3D": true,
+          "interruptible": true
+        },
+        {
+          "name": "sounds/em_fire_breather_loop4",
+          "is3D": true,
+          "interruptible": true
+        }
+      ]
+    }
+  }
+}

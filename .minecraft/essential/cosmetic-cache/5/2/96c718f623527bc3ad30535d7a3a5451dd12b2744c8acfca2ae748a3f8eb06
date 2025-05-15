@@ -1,0 +1,18 @@
+[
+    {
+        "type": "INTERRUPTS_EMOTE",
+        "id": "fire_breather",
+        "enabled": true,
+        "data": {
+            "MOVEMENT": true
+        }
+    },
+    {
+        "type": "PREVIEW_RESET_TIME",
+        "id": "UNUSED",
+        "enabled": true,
+        "data": {
+            "time": 6.75
+        }
+    }
+]

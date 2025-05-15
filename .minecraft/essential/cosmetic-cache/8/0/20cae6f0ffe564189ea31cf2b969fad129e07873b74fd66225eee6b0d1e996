@@ -1,0 +1,321 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ocean_aura",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "fish",
+					"parent": "body",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "fish_1",
+					"parent": "fish",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "fish_1_body_orbit",
+					"parent": "fish_1",
+					"pivot": [0, 1.5, 0]
+				},
+				{
+					"name": "fish_1_body_main",
+					"parent": "fish_1_body_orbit",
+					"pivot": [0, 1.5, 0]
+				},
+				{
+					"name": "fish_1_body",
+					"parent": "fish_1_body_main",
+					"pivot": [0, 1.5, 0]
+				},
+				{
+					"name": "fish_1_body_noise",
+					"parent": "fish_1_body",
+					"pivot": [0, 1.5, 0],
+					"cubes": [
+						{"origin": [-1, 0, -3], "size": [2, 3, 6], "uv": [32, 0]}
+					]
+				},
+				{
+					"name": "particle_source_1",
+					"parent": "fish_1_body_noise",
+					"pivot": [0, 1.5, 3],
+					"locators": {
+						"particle_source_1": [0, 1.5, 3]
+					}
+				},
+				{
+					"name": "fish_1_fin_back",
+					"parent": "fish_1_body_noise",
+					"pivot": [0, 3, 0],
+					"cubes": [
+						{
+							"origin": [0, 3, -1],
+							"size": [0, 2, 2],
+							"uv": {
+								"west": {"uv": [51, 2], "uv_size": [2, 2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_1_fin_tail",
+					"parent": "fish_1_body_noise",
+					"pivot": [0, 1.5, 3],
+					"cubes": [
+						{
+							"origin": [0, 0, 3],
+							"size": [0, 3, 3],
+							"uv": {
+								"west": {"uv": [60, 0], "uv_size": [3, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_1_fin_left",
+					"parent": "fish_1_body_noise",
+					"pivot": [1, 1, 0],
+					"cubes": [
+						{
+							"origin": [1, 0, 0],
+							"size": [2, 2, 0],
+							"uv": {
+								"north": {"uv": [32, 10], "uv_size": [2, 2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_1_fin_right",
+					"parent": "fish_1_body_noise",
+					"pivot": [-1, 1, 0],
+					"cubes": [
+						{
+							"origin": [-3, 0, 0],
+							"size": [2, 2, 0],
+							"uv": {
+								"north": {"uv": [32, 13], "uv_size": [2, 2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_2",
+					"parent": "fish",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "fish_2_body_orbit",
+					"parent": "fish_2",
+					"pivot": [0, 3, 0]
+				},
+				{
+					"name": "fish_2_body_main",
+					"parent": "fish_2_body_orbit",
+					"pivot": [0, 3, 0]
+				},
+				{
+					"name": "fish_2_body",
+					"parent": "fish_2_body_main",
+					"pivot": [0, 3, 0]
+				},
+				{
+					"name": "fish_2_body_noise",
+					"parent": "fish_2_body",
+					"pivot": [0, 3, 0],
+					"cubes": [
+						{"origin": [-1, 0, -3], "size": [2, 6, 6], "uv": [32, 11]}
+					]
+				},
+				{
+					"name": "particle_source_2",
+					"parent": "fish_2_body_noise",
+					"pivot": [0, 3, 3],
+					"locators": {
+						"particle_source_2": [0, 3, 3]
+					}
+				},
+				{
+					"name": "fish_2_fin_bottom",
+					"parent": "fish_2_body_noise",
+					"pivot": [0, 0, -0.5],
+					"cubes": [
+						{
+							"origin": [0, -1, -2],
+							"size": [0, 1, 3],
+							"uv": {
+								"west": {"uv": [59, 18], "uv_size": [3, 1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_2_fin_back",
+					"parent": "fish_2_body_noise",
+					"pivot": [0, 6, 0.5],
+					"cubes": [
+						{
+							"origin": [0, 6, -2],
+							"size": [0, 2, 4],
+							"uv": {
+								"west": {"uv": [59, 8], "uv_size": [4, 2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_2_fin_left",
+					"parent": "fish_2_body_noise",
+					"pivot": [1, 1, -1],
+					"cubes": [
+						{
+							"origin": [1, 0, -1],
+							"size": [2, 2, 0],
+							"uv": {
+								"north": {"uv": [43, 11], "uv_size": [2, 2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_2_fin_right",
+					"parent": "fish_2_body_noise",
+					"pivot": [-1, 1, -1],
+					"cubes": [
+						{
+							"origin": [-3, 0, -1],
+							"size": [2, 2, 0],
+							"uv": {
+								"north": {"uv": [43, 14], "uv_size": [2, 2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_2_fin_tail",
+					"parent": "fish_2_body_noise",
+					"pivot": [0, 3, 3],
+					"cubes": [
+						{
+							"origin": [0, 1, 3],
+							"size": [0, 4, 3],
+							"uv": {
+								"west": {"uv": [58, 12], "uv_size": [3, 4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_3",
+					"parent": "fish",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "fish_3_body_orbit",
+					"parent": "fish_3",
+					"pivot": [0, 1.5, 0]
+				},
+				{
+					"name": "fish_3_body_main",
+					"parent": "fish_3_body_orbit",
+					"pivot": [0, 1.5, 0]
+				},
+				{
+					"name": "fish_3_body",
+					"parent": "fish_3_body_main",
+					"pivot": [0, 1.5, 0]
+				},
+				{
+					"name": "fish_3_body_noise",
+					"parent": "fish_3_body",
+					"pivot": [0, 1.5, 0],
+					"cubes": [
+						{"origin": [-1, 0, -3], "size": [2, 3, 6], "uv": [32, 24]}
+					]
+				},
+				{
+					"name": "particle_source_3",
+					"parent": "fish_3_body_noise",
+					"pivot": [0, 1.5, 3],
+					"locators": {
+						"particle_source_3": [0, 1.5, 3]
+					}
+				},
+				{
+					"name": "fish_3_fin_back",
+					"parent": "fish_3_body_noise",
+					"pivot": [0, 3, 0],
+					"cubes": [
+						{
+							"origin": [0, 3, -2],
+							"size": [0, 3, 5],
+							"uv": {
+								"west": {"uv": [50, 25], "uv_size": [5, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_3_fin_tail",
+					"parent": "fish_3_body_noise",
+					"pivot": [0, 1.5, 3],
+					"cubes": [
+						{
+							"origin": [0, 0, 3],
+							"size": [0, 3, 4],
+							"uv": {
+								"west": {"uv": [60, 24], "uv_size": [4, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_3_fin_left",
+					"parent": "fish_3_body_noise",
+					"pivot": [1, 1, 0],
+					"cubes": [
+						{
+							"origin": [1, 0, 0],
+							"size": [2, 2, 0],
+							"uv": {
+								"north": {"uv": [32, 34], "uv_size": [2, 2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fish_3_fin_right",
+					"parent": "fish_3_body_noise",
+					"pivot": [-1, 1, 0],
+					"cubes": [
+						{
+							"origin": [-3, 0, 0],
+							"size": [2, 2, 0],
+							"uv": {
+								"north": {"uv": [32, 37], "uv_size": [2, 2]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

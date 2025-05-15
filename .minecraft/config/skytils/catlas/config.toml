@@ -27,6 +27,7 @@
 	[map.size]
 		map_text_scale = 0.75
 		player_name_scale = 0.8
+		head_class_border_scale = 0.2
 		player_heads_scale = 1.0
 
 	[map.toggle]

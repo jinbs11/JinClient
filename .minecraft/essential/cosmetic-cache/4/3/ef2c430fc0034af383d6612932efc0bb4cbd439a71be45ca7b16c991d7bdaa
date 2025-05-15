@@ -1,0 +1,181 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.axolotl",
+				"texture_width": 80,
+				"texture_height": 80,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "pet",
+					"parent": "head",
+					"pivot": [0, 32, 0]
+				},
+				{
+					"name": "axolotl_pet",
+					"parent": "pet",
+					"pivot": [0, 32, 0]
+				},
+				{
+					"name": "body_pet",
+					"parent": "axolotl_pet",
+					"pivot": [0, 32, 0],
+					"cubes": [
+						{"origin": [-3, 32, -2], "size": [6, 4, 6], "uv": [0, 11]},
+						{
+							"origin": [0, 36, -2],
+							"size": [0, 1, 6],
+							"uv": {
+								"west": {"uv": [6, 28], "uv_size": [6, 1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "head_pet",
+					"parent": "body_pet",
+					"pivot": [0, 34, -2],
+					"cubes": [
+						{"origin": [-4, 32, -7], "size": [8, 5, 5], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "gill",
+					"parent": "head_pet",
+					"pivot": [0, 34, -2]
+				},
+				{
+					"name": "gills_left",
+					"parent": "gill",
+					"pivot": [4, 34, -3],
+					"cubes": [
+						{
+							"origin": [4, 32, -3],
+							"size": [3, 7, 0],
+							"uv": {
+								"north": {"uv": [0, 34], "uv_size": [3, 7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "gills_right",
+					"parent": "gill",
+					"pivot": [-4, 34, -3],
+					"cubes": [
+						{
+							"origin": [-7, 32, -3],
+							"size": [3, 7, 0],
+							"uv": {
+								"north": {"uv": [3, 34], "uv_size": [-3, 7]}
+							}
+						}
+					]
+				},
+				{
+					"name": "gills_top",
+					"parent": "gill",
+					"pivot": [0, 37, -3],
+					"cubes": [
+						{
+							"origin": [-4, 37, -3],
+							"size": [8, 3, 0],
+							"uv": {
+								"north": {"uv": [0, 30], "uv_size": [8, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "tail_pet",
+					"parent": "body_pet",
+					"pivot": [0, 34, 4],
+					"cubes": [
+						{
+							"origin": [0, 32, 4],
+							"size": [0, 5, 7],
+							"uv": {
+								"west": {"uv": [7, 22], "uv_size": [7, 5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "legs_pet",
+					"parent": "axolotl_pet",
+					"pivot": [0, 33, 0.5]
+				},
+				{
+					"name": "leg_pet_front_left",
+					"parent": "legs_pet",
+					"pivot": [3, 33, -0.5],
+					"cubes": [
+						{
+							"origin": [3, 33, -2],
+							"size": [5, 0, 3],
+							"uv": {
+								"up": {"uv": [7, 34], "uv_size": [5, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leg_pet_front_right",
+					"parent": "legs_pet",
+					"pivot": [-3, 33, -0.5],
+					"cubes": [
+						{
+							"origin": [-8, 33, -2],
+							"size": [5, 0, 3],
+							"uv": {
+								"up": {"uv": [12, 34], "uv_size": [-5, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leg_pet_back_left",
+					"parent": "legs_pet",
+					"pivot": [3, 33, 3.5],
+					"cubes": [
+						{
+							"origin": [3, 33, 2],
+							"size": [5, 0, 3],
+							"uv": {
+								"up": {"uv": [7, 34], "uv_size": [5, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leg_pet_back_right",
+					"parent": "legs_pet",
+					"pivot": [-3, 33, 3.5],
+					"cubes": [
+						{
+							"origin": [-8, 33, 2],
+							"size": [5, 0, 3],
+							"uv": {
+								"up": {"uv": [12, 34], "uv_size": [-5, 3]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

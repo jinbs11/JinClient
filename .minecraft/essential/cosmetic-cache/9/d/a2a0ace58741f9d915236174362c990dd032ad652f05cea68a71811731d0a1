@@ -1,0 +1,39 @@
+[
+    {
+        "type": "ARMOR_HANDLING",
+        "id": "SHOULDER_PADS_UNDERWORLD",
+        "enabled": true,
+        "data": {
+            "arms": true,
+            "body": true
+        }
+    },
+    {
+        "type": "MUTUALLY_EXCLUSIVE",
+        "id": "UNUSED",
+        "enabled": true,
+        "data": {
+            "slots": [
+                "BACK"
+            ]
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "ENDER_ENTITY_BODY",
+        "enabled": true,
+        "data": {
+            "arm_extra_left": true,
+            "arm_extra_right": true
+        }
+    },
+    {
+        "type": "EXTERNAL_HIDDEN_BONE",
+        "id": "FIRE_ARMOR_REMASTER",
+        "enabled": true,
+        "data": {
+            "shoulderpad_left": true,
+            "shoulderpad_right": true
+        }
+    }
+]

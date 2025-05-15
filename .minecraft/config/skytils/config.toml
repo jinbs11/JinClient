@@ -21,7 +21,8 @@
 		config_button_on_pause = true
 		reopen_options_menu = true
 		first_launch = true
-		last_launched_skytils_version = "1.10.13"
+		last_launched_skytils_version = "1.11.0"
+		disable_volume_overrides = false
 
 	[general.reparty]
 		override_other_reparty_commands = true
@@ -97,6 +98,7 @@
 		show_head_floor_number = false
 		show_item_star_count = false
 		hide_midas_staff_gold = false
+		"block_zapper:_left_click_to_undo" = false
 		combine_helper = false
 		show_enchanted_book_abbreviation = false
 		held_item_scale = 1.0
@@ -296,6 +298,7 @@
 		dungeon_crypts_counter = false
 
 	[dungeons.terminal_solvers]
+		change_all_to_same_color_solver_lock = false
 		predict_clicks_for_alignment_solver = true
 		change_all_to_same_color_solver = false
 		predict_clicks_for_simon_says_solver = false

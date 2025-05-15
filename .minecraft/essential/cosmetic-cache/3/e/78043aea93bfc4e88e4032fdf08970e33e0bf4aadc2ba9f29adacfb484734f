@@ -1,0 +1,27 @@
+[
+  {
+    "id": "UNUSED",
+    "type": "VARIANTS",
+    "enabled": true,
+    "data": {
+      "variants": [
+        {
+          "name": "fire",
+          "color": 16753920
+        },
+        {
+          "name": "blue",
+          "color": 2654676
+        },
+        {
+          "name": "green",
+          "color": 3329330
+        },
+        {
+          "name": "purple",
+          "color": 6950317
+        }
+      ]
+    }
+  }
+]

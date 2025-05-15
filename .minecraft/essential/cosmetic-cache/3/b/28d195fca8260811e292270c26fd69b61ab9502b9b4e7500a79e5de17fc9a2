@@ -1,0 +1,15 @@
+{
+  "sound_definitions": {
+    "ender_rage_sound": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ender_rage",
+          "is3D": true,
+          "interruptible": true
+        }
+      ]
+    }
+  }
+}
