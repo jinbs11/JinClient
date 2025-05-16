@@ -26,3 +26,9 @@ dist-ssr
 # Environment variables
 .env
 /data/
+
+/.minecraft/mods/*
+!/.minecraft/mods/.gitkeep
+
+/mods_inactive/*
+!/mods_inactive/*.gitkeep

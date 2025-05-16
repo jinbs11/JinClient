@@ -6,7 +6,8 @@ export function saveUserToDB(profile) {
     name: profile.name,
     access_token: profile.access_token,
     refresh_token: profile.refresh_token,
-    user_properties: JSON.stringify(profile.user_properties ?? {})
+    user_properties: JSON.stringify(profile.user_properties ?? {}),
+    refresh_token: profile.refresh_token
   });
 }
 

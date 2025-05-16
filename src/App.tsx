@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { TopBar, SideBar } from './components/Bars'
 import { SettingsView, ModsView, PlayView } from './components/OptionsView'
+import AutoLogin from './components/AutoLogin'
 
 function App() {
   const [view, setView] = useState("play");
@@ -21,9 +22,9 @@ function App() {
         return <div>Valitse näkymä</div>;
     }
   };
-
   return (
     <div className="flex flex-col h-screen bg-[#2B2D3C]">
+      <AutoLogin setUser={setUser} />
       {/* Yläpalkki */}
       <TopBar user={user} onLogin={setUser} />
 

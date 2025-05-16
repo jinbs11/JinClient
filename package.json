@@ -10,10 +10,12 @@
     "electron": "wait-on http://localhost:5173 && electron .",
     "build": "vite build",
     "rebuild": "electron-rebuild -f -w better-sqlite3",
-    "postinstall": "electron-rebuild install-app-deps"
+    "postinstall": "electron-rebuild install-app-deps",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@azure/msal-browser": "^4.11.1",
+    "@azure/msal-node": "^3.5.3",
     "@azure/msal-react": "^3.0.11",
     "better-sqlite3": "^11.10.0",
     "cors": "^2.8.5",

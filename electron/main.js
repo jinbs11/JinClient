@@ -7,6 +7,7 @@ import followRedirects from 'follow-redirects';
 import { execFile } from 'child_process';
 const https = followRedirects.https;
 import { launchMinecraft } from './launcher.js';
+import { ConfidentialClientApplication } from '@azure/msal-node';
 import '../server/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -114,4 +115,12 @@ ipcMain.handle('check-installed-mods', async (event, filenames) => {
     const filePath = path.join(modsPath, filename);
     return fs.existsSync(filePath);
   });
+});
+
+ipcMain.handle('auto-login', async (_, userId) => {
+  const refreshToken = await getRefreshTokenFromDb(userId);
+  if (!refreshToken) return null;
+
+  const accessToken = await refreshAccessToken(refreshToken);
+  return accessToken;
 });

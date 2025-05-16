@@ -35,6 +35,27 @@ app.post('/auth/token', async (req, res) => {
   }
 });
 
+app.post('/auth/refresh', async (req, res) => {
+  const { refresh_token } = req.body;
+
+  const auth = new MicrosoftAuth({
+    client_id: 'e6fd8ee6-21b5-482d-988d-b8aae6980d3a',
+    client_secret: '',
+    redirect_uri: 'http://localhost:5173/auth-callback',
+    refresh_token
+  });
+
+  try {
+    await auth.getTokens(); // Toteuta tämä metodi MicrosoftAuth-luokkaan
+
+    const profile = await auth.getProfile();
+    return res.json({ access_token: auth.access_token, username: profile.name });
+  } catch (err) {
+    console.error("❌ Refresh error:", err);
+    return res.status(401).json({ error: "Refresh failed" });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Auth server running at http://localhost:${PORT}`);
 });
