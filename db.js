@@ -25,7 +25,8 @@ db.prepare(`
     access_token TEXT NOT NULL,
     uuid TEXT NOT NULL,
     name TEXT NOT NULL,
-    user_properties TEXT
+    user_properties TEXT,
+    refresh_token TEXT
   )
 `).run();
 

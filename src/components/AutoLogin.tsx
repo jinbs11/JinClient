@@ -1,27 +1,26 @@
 import { useEffect } from 'react';
+const { ipcRenderer } = window.require('electron'); // Huom: riippuu bundlerista
 
-const AutoLogin = ({ setUser }: { setUser: (user: string | null) => void }) => {
+const AutoLogin = ({ userId, setUser }: { userId: string, setUser: (user: string | null) => void }) => {
   useEffect(() => {
-    const refreshToken = localStorage.getItem("refresh_token");
-    if (!refreshToken) return;
-
-    fetch("http://localhost:5174/auth/refresh", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ refresh_token: refreshToken }),
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.access_token) {
-          localStorage.setItem("access_token", data.access_token);
-          localStorage.setItem("refresh_token", data.refresh_token);
-          setUser(data.username);
+    const tryAutoLogin = async () => {
+      try {
+        const accessToken = await ipcRenderer.invoke('auto-login', userId);
+        if (accessToken) {
+          // Token tallennetaan tai käytetään jossain muualla
+          // localStorage.setItem('access_token', accessToken); // valinnainen
+          setUser(userId); // tai hae nimi jostain
         } else {
           setUser(null);
         }
-      })
-      .catch(() => setUser(null));
-  }, []);
+      } catch (error) {
+        console.error('Auto-login error:', error);
+        setUser(null);
+      }
+    };
+
+    tryAutoLogin();
+  }, [userId]);
 
   return null; // Ei renderöi mitään
 };

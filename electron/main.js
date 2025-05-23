@@ -9,6 +9,9 @@ const https = followRedirects.https;
 import { launchMinecraft } from './launcher.js';
 import { ConfidentialClientApplication } from '@azure/msal-node';
 import '../server/index.js';
+import { getLastUsedUser } from '../server/userHandler.js';
+import fetch from 'node-fetch';
+import { autologin } from './auth.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -71,6 +74,7 @@ function createWindow() {
 
   win.setMenuBarVisibility(false);
   win.removeMenu();
+  win.webContents.openDevTools();
 
   win.loadURL('http://localhost:5173');
 }
@@ -82,6 +86,8 @@ app.whenReady().then(() => {
     launchMinecraft();
   });
 });
+console.log("Using preload:", path.join(__dirname, 'preload.mjs'));
+
 
 ipcMain.handle('copy-mod', (event, filename) => {
   const src = path.join(__dirname, '..', 'mods_inactive', filename);
@@ -117,10 +123,6 @@ ipcMain.handle('check-installed-mods', async (event, filenames) => {
   });
 });
 
-ipcMain.handle('auto-login', async (_, userId) => {
-  const refreshToken = await getRefreshTokenFromDb(userId);
-  if (!refreshToken) return null;
-
-  const accessToken = await refreshAccessToken(refreshToken);
-  return accessToken;
+ipcMain.handle('auth-autologin', async () => {
+  return await autologin();
 });

@@ -11,6 +11,18 @@ interface TopBarProps {
 }
 
 export const TopBar: React.FC<TopBarProps> = ({ user, onLogin }) => {
+  useEffect(() => {
+  window.electronAPI.authAPI.autologin()
+    .then((data) => {
+      console.log("✅ Autologin data: ", data);
+      // tee jotain access_tokenilla
+    })
+    .catch((err) => {
+      console.error("Autologin error: ", err);
+    });
+  }, []);
+
+
   const handleMicrosoftLogin = async () => {
     // Kutsu pääprosessia (vaatii että preload-tiedostossa on IPC-välitys)
     const code = await window.electronAPI.invoke("login-with-microsoft");
