@@ -12,20 +12,23 @@ import '../server/index.js';
 import { getLastUsedUser } from '../server/userHandler.js';
 import fetch from 'node-fetch';
 import { autologin } from './auth.js';
+import util from 'util';
+const execFileAsync = util.promisify(execFile);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const fetchModsScript = path.join(__dirname, '..', 'server', 'fetchAllMods.js');
 
 // 🚀 Suorita skripti ennen ikkunan luontia
-execFile('node', [fetchModsScript], (error, stdout, stderr) => {
-  if (error) {
+async function runFetchMods() {
+  try {
+    const { stdout, stderr } = await execFileAsync('node', [fetchModsScript]);
+    console.log('📦 fetchAllMods.js output:\n', stdout);
+    if (stderr) console.error('⚠️ stderr:', stderr);
+  } catch (error) {
     console.error('❌ Failed to run fetchAllMods.js:', error.message);
-    return;
   }
-  console.log('📦 fetchAllMods.js output:\n', stdout);
-  if (stderr) console.error('⚠️ stderr:', stderr);
-});
+}
 
 ipcMain.handle("login-with-microsoft", async () => {
   return new Promise((resolve, reject) => {
@@ -60,27 +63,59 @@ ipcMain.handle("login-with-microsoft", async () => {
   });
 });
 
-function createWindow() {
-  const win = new BrowserWindow({
+let splashWindow;
+let mainWindow;
+
+function createSplashWindow() {
+  splashWindow = new BrowserWindow({
+    width: 400,
+    height: 120,
+    frame: true,
+    title: "JinClient",
+    alwaysOnTop: true,
+    resizable: false,
+    show: true,
+    center: true,
+    webPreferences: {
+      
+    }
+  });
+
+  splashWindow.setMenuBarVisibility(false);
+  splashWindow.removeMenu();
+
+  splashWindow.loadURL('http://localhost:5173/splash.html');
+}
+
+function createMainWindow() {
+  mainWindow = new BrowserWindow({
     width: 1200,
     height: 650,
     resizable: false,
     minimizable: true,
     useContentSize: true,
+    show: false, // älä näytä heti
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
   });
 
-  win.setMenuBarVisibility(false);
-  win.removeMenu();
-  win.webContents.openDevTools();
+  mainWindow.setMenuBarVisibility(false);
+  mainWindow.removeMenu();
+  mainWindow.loadURL('http://localhost:5173/index.html');
 
-  win.loadURL('http://localhost:5173');
+  // Kun pääikkuna on valmis, näytä se ja sulje splash
+  mainWindow.once('ready-to-show', () => {
+    splashWindow.close();
+    mainWindow.show();
+    mainWindow.webContents.openDevTools(); // poista tämä jos et halua devtoolsia
+  });
 }
 
-app.whenReady().then(() => {
-  createWindow();
+app.whenReady().then(async () => {
+  createSplashWindow();
+  await runFetchMods();
+  createMainWindow();
 
   ipcMain.handle('launch-minecraft', async () => {
     launchMinecraft();

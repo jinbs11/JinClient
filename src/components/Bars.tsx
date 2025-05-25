@@ -11,35 +11,6 @@ interface TopBarProps {
 }
 
 export const TopBar: React.FC<TopBarProps> = ({ user, onLogin }) => {
-  useEffect(() => {
-  window.electronAPI.authAPI.autologin()
-    .then((data) => {
-      console.log("✅ Autologin data: ", data);
-      // tee jotain access_tokenilla
-    })
-    .catch((err) => {
-      console.error("Autologin error: ", err);
-    });
-  }, []);
-
-
-  const handleMicrosoftLogin = async () => {
-    // Kutsu pääprosessia (vaatii että preload-tiedostossa on IPC-välitys)
-    const code = await window.electronAPI.invoke("login-with-microsoft");
-    if (code) {
-      console.log("Received code:", code);
-      // Lähetä backendille
-      const res = await fetch("http://localhost:5174/auth/token", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code }),
-      });
-      const data = await res.json();
-      if (data.username) {
-        onLogin(data.username);
-      }
-    }
-  };
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
@@ -55,6 +26,7 @@ export const TopBar: React.FC<TopBarProps> = ({ user, onLogin }) => {
           .then((res) => res.json())
           .then((data) => {
             if (data.username) {
+              localStorage.setItem("username", data.username)
               onLogin(data.username); // ← Oikea tapa päivittää tila
             }
           })
@@ -73,14 +45,7 @@ export const TopBar: React.FC<TopBarProps> = ({ user, onLogin }) => {
       <span className="text-xl">JinClient</span>
 
       <div className="flex items-center gap-3">
-        {!user ? (
-          <button
-            onClick={handleMicrosoftLogin}
-            className="bg-[#13131A] hover:bg-[#2a2a3a] px-5 py-1 rounded cursor-pointer"
-          >
-            Login
-          </button>
-        ) : (
+        {user && (
           <div className="flex items-center gap-1 bg-[#13131A] px-5 py-1 rounded cursor-pointer">
             <span>{user}</span>
             <MdArrowDropDown className="text-2xl" />
