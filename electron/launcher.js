@@ -16,7 +16,7 @@ export async function launchMinecraft() {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
 
-  const forgePath = path.join(__dirname, '..', '.minecraft', 'versions', 'forge-1.8.9.jar');
+  const forgePath = path.join(__dirname, '..', 'forge-1.8.9.jar');
   const client_token = randomUUID();
 
   const opts = {
