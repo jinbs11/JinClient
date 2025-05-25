@@ -5,50 +5,28 @@ type SideBarProps = {
   setView: (view: string) => void;
 };
 
-interface TopBarProps {
-  user: string | null;
-  onLogin: (username: string) => void;
+interface User {
+  username: string;
 }
 
-export const TopBar: React.FC<TopBarProps> = ({ user, onLogin }) => {
+interface TopBarProps {
+  user: User | null;
+}
 
-  useEffect(() => {
-    const handleMessage = (event: MessageEvent) => {
-      if (event.data?.type === "auth-code") {
-        const code = event.data.code;
-        console.log("✅ Received auth code from popup:", code);
-
-        fetch("http://localhost:5173/auth-callback", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ code }),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.username) {
-              localStorage.setItem("username", data.username)
-              onLogin(data.username); // ← Oikea tapa päivittää tila
-            }
-          })
-          .catch((err) => {
-            console.error("❌ Login failed", err);
-          });
-      }
-    };
-
-    window.addEventListener("message", handleMessage);
-    return () => window.removeEventListener("message", handleMessage);
-  }, [onLogin]);
-
+export const TopBar: React.FC<TopBarProps> = ({ user }) => {
   return (
     <div className="w-full min-h-[60px] bg-[#181824] text-white flex items-center px-4 font-semibold select-none justify-between">
       <span className="text-xl">JinClient</span>
 
       <div className="flex items-center gap-3">
-        {user && (
+        {user ? (
           <div className="flex items-center gap-1 bg-[#13131A] px-5 py-1 rounded cursor-pointer">
-            <span>{user}</span>
+            <span>{user.username}</span>
             <MdArrowDropDown className="text-2xl" />
+          </div>
+        ) : (
+          <div className="px-5 py-1 bg-[#2a2a35] rounded text-sm">
+            Logging in...
           </div>
         )}
       </div>

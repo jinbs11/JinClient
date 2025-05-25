@@ -4,6 +4,7 @@ import cors from 'cors';
 import MicrosoftAuth from './MicrosoftAuth.js';
 const app = express();
 const PORT = 5174;
+import { getLastUsedUser } from './userHandler.js';
 
 app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
@@ -28,10 +29,25 @@ app.post('/auth/token', async (req, res) => {
     if (!hasGame) return res.status(403).json({ error: 'Account does not own Minecraft' });
 
     const profile = await auth.getProfile();
-    return res.json({ username: profile.name, uuid: profile.uuid });
+    return res.json({ username: profile.name, uuid: profile.uuid, access_token: profile.access_token });
   } catch (err) {
     console.error("❌ Auth error:", err);
     return res.status(500).json({ error: "Authentication failed" });
+  }
+});
+
+app.get("/me", (req, res) => {
+  const user = getLastUsedUser();
+
+  if (user) {
+    res.json({
+      username: user.name,
+      uuid: user.uuid,
+      access_token: user.access_token,
+      user_properties: user.user_properties,
+    });
+  } else {
+    res.status(404).json({ error: "No user found" });
   }
 });
 

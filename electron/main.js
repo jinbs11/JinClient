@@ -1,16 +1,12 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { Client } from 'minecraft-launcher-core';
 import fs from 'fs';
 import followRedirects from 'follow-redirects';
 import { execFile } from 'child_process';
 const https = followRedirects.https;
 import { launchMinecraft } from './launcher.js';
-import { ConfidentialClientApplication } from '@azure/msal-node';
 import '../server/index.js';
-import { getLastUsedUser } from '../server/userHandler.js';
-import fetch from 'node-fetch';
 import { autologin } from './auth.js';
 import util from 'util';
 const execFileAsync = util.promisify(execFile);
