@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import LoadingBar from '../components/LoadingBar';
 
 export default function Splash() {

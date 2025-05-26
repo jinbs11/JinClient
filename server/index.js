@@ -11,11 +11,14 @@ app.use(express.json());
 
 app.post('/auth/token', async (req, res) => {
   const { code } = req.body;
-
+  const isDev = !app.isPackaged;
+  
   const auth = new MicrosoftAuth({
     client_id: 'e6fd8ee6-21b5-482d-988d-b8aae6980d3a',
     client_secret: '', // lisää jos käytät client_secret
-    redirect_uri: 'http://localhost:5173/auth-callback',
+    redirect_uri: isDev
+      ? 'http://localhost:5173/auth-callback'
+      : 'jinclient://auth-callback',
     code
   });
 
@@ -53,11 +56,14 @@ app.get("/me", (req, res) => {
 
 app.post('/auth/refresh', async (req, res) => {
   const { refresh_token } = req.body;
+  const isDev = !app.isPackaged;
 
   const auth = new MicrosoftAuth({
     client_id: 'e6fd8ee6-21b5-482d-988d-b8aae6980d3a',
     client_secret: '',
-    redirect_uri: 'http://localhost:5173/auth-callback',
+    redirect_uri: isDev
+      ? 'http://localhost:5173/auth-callback'
+      : 'jinclient://auth-callback',
     refresh_token
   });
 
@@ -73,5 +79,5 @@ app.post('/auth/refresh', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Auth server running at http://localhost:${PORT}`);
+  
 });

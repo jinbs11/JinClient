@@ -11,25 +11,46 @@ import { autologin } from './auth.js';
 import util from 'util';
 const execFileAsync = util.promisify(execFile);
 
+const isDev = !app.isPackaged;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const fetchModsScript = path.join(__dirname, '..', 'server', 'fetchAllMods.js');
+
+app.setAsDefaultProtocolClient('jinclient');
+
+app.on('open-url', (event, url) => {
+  event.preventDefault();
+  const parsedUrl = new URL(url);
+  const code = parsedUrl.searchParams.get("code");
+
+  if (pendingAuthResolve && code) {
+    pendingAuthResolve(code);
+    pendingAuthResolve = null;
+  }
+});
 
 // 🚀 Suorita skripti ennen ikkunan luontia
 async function runFetchMods() {
   try {
     const { stdout, stderr } = await execFileAsync('node', [fetchModsScript]);
-    console.log('📦 fetchAllMods.js output:\n', stdout);
     if (stderr) console.error('⚠️ stderr:', stderr);
   } catch (error) {
     console.error('❌ Failed to run fetchAllMods.js:', error.message);
   }
 }
 
+let pendingAuthResolve;
+
 ipcMain.handle("login-with-microsoft", async () => {
   return new Promise((resolve, reject) => {
+    pendingAuthResolve = resolve;
+
+    const isDev = !app.isPackaged;
     const clientId = "e6fd8ee6-21b5-482d-988d-b8aae6980d3a";
-    const redirectUri = "http://localhost:5173/auth-callback";
+    const redirectUri = isDev
+      ? "http://localhost:5173/auth-callback"
+      : "jinclient://auth-callback";
     const scope = "XboxLive.signin offline_access";
 
     const authUrl = `https://login.microsoftonline.com/consumers/oauth2/v2.0/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&response_mode=query&scope=${encodeURIComponent(scope)}&state=123`;
@@ -44,18 +65,20 @@ ipcMain.handle("login-with-microsoft", async () => {
 
     authWin.loadURL(authUrl);
 
-    // Tarkkaile URLia
-    authWin.webContents.on('will-redirect', (event, url) => {
-      const parsedUrl = new URL(url);
-      if (parsedUrl.origin === "http://localhost:5173" && parsedUrl.pathname === "/auth-callback") {
-        const code = parsedUrl.searchParams.get("code");
-        if (code) {
-          event.preventDefault(); // estä uudelleenlataus
-          authWin.close();
-          resolve(code); // lähetä code takaisin render-prosessille
+    // Kehitystilassa tarkkaile will-redirect
+    if (isDev) {
+      authWin.webContents.on('will-redirect', (event, url) => {
+        const parsedUrl = new URL(url);
+        if (parsedUrl.origin === "http://localhost:5173" && parsedUrl.pathname === "/auth-callback") {
+          const code = parsedUrl.searchParams.get("code");
+          if (code) {
+            event.preventDefault();
+            authWin.close();
+            resolve(code);
+          }
         }
-      }
-    });
+      });
+    }
   });
 });
 
@@ -72,15 +95,18 @@ function createSplashWindow() {
     resizable: false,
     show: true,
     center: true,
-    webPreferences: {
-      
-    }
+    icon: path.join(__dirname, '..', 'public', 'logo.ico'),
+    webPreferences: {}
   });
 
   splashWindow.setMenuBarVisibility(false);
   splashWindow.removeMenu();
 
-  splashWindow.loadURL('http://localhost:5173/splash.html');
+  if (isDev) {
+    splashWindow.loadURL('http://localhost:5173/splash.html');
+  } else {
+    splashWindow.loadFile(path.join(__dirname, '..', 'dist', 'splash.html'));
+  }
 }
 
 function createMainWindow() {
@@ -90,7 +116,8 @@ function createMainWindow() {
     resizable: false,
     minimizable: true,
     useContentSize: true,
-    show: false, // älä näytä heti
+    show: false,
+    icon: path.join(__dirname, '..', 'public', 'logo.ico'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -98,13 +125,17 @@ function createMainWindow() {
 
   mainWindow.setMenuBarVisibility(false);
   mainWindow.removeMenu();
-  mainWindow.loadURL('http://localhost:5173/index.html');
 
-  // Kun pääikkuna on valmis, näytä se ja sulje splash
+  if (isDev) {
+    mainWindow.loadURL('http://localhost:5173/index.html');
+  } else {
+    mainWindow.loadFile(path.join(__dirname, '..', 'dist', 'index.html'));
+  }
+
   mainWindow.once('ready-to-show', () => {
     splashWindow.close();
     mainWindow.show();
-    mainWindow.webContents.openDevTools(); // poista tämä jos et halua devtoolsia
+    if (isDev) mainWindow.webContents.openDevTools();
   });
 }
 
@@ -117,7 +148,6 @@ app.whenReady().then(async () => {
     launchMinecraft();
   });
 });
-console.log("Using preload:", path.join(__dirname, 'preload.mjs'));
 
 
 ipcMain.handle('copy-mod', (event, filename) => {
@@ -126,7 +156,6 @@ ipcMain.handle('copy-mod', (event, filename) => {
 
   try {
     fs.copyFileSync(src, dest);
-    console.log(`✅ Copied mod: ${filename}`);
   } catch (err) {
     console.error(`❌ Failed to copy mod: ${filename}`, err);
   }
@@ -138,7 +167,6 @@ ipcMain.handle('remove-mod', (event, filename) => {
   try {
     if (fs.existsSync(dest)) {
       fs.unlinkSync(dest);
-      console.log(`🗑️ Removed mod: ${filename}`);
     }
   } catch (err) {
     console.error(`❌ Failed to remove mod: ${filename}`, err);

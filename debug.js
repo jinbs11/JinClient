@@ -16,7 +16,4 @@ addUser({
   user_properties: '{"skin":"default"}'
 });
 
-console.log('✔ Dummy users added.');
-
 const all = getAllUsers();
-console.log('📄 All users:', all);

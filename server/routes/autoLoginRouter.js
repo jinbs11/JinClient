@@ -25,7 +25,6 @@ router.post('/autologin', async (req, res) => {
     });
 
     const tokenData = await tokenRes.json();
-    console.log("✅ Refreshed tokens:", tokenData);
 
     return res.json({ access_token: tokenData.access_token });
   } catch (err) {

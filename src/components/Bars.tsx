@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { MdArrowDropUp, MdArrowDropDown } from "react-icons/md";
+import { MdArrowDropDown } from "react-icons/md";
 
 type SideBarProps = {
   setView: (view: string) => void;

@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { TopBar, SideBar } from './components/Bars'
 import { SettingsView, ModsView, PlayView } from './components/OptionsView'
@@ -29,7 +27,6 @@ useEffect(() => {
           body: JSON.stringify({ code }),
         });
         const data = await res.json();
-        console.log(data)
         window.accessToken = data.access_token;
         setRefreshUser(prev => prev + 1); // ⬅️ uusi käyttäjä nyt tietokannassa
       }
