@@ -7,4 +7,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
   removeMod: (filename) => ipcRenderer.invoke('remove-mod', filename),
   checkInstalledMods: (filenames) => ipcRenderer.invoke('check-installed-mods', filenames),
   invoke: (channel, ...args) => ipcRenderer.invoke(channel, ...args),
+
+  authAPI: {
+     autologin: () => ipcRenderer.invoke('auth-autologin'),
+  }
 });

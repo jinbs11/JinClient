@@ -65,7 +65,6 @@ async function removeOldVersions(modName) {
     if (pattern.test(file)) {
       const fullPath = path.join(modsFolderPath, file);
       fs.unlinkSync(fullPath);
-      console.log(`🗑️ Removed old version: ${file}`);
     }
   });
 }
@@ -85,7 +84,6 @@ async function downloadMod(mod) {
       response.pipe(file);
       file.on('finish', () => {
         file.close(() => {
-          console.log(`⬇️ Downloaded ${mod.filename}`);
           resolve();
         });
       });
@@ -121,7 +119,6 @@ async function run() {
   }
 
   fs.writeFileSync(modsJsonPath, JSON.stringify(mods, null, 2));
-  console.log("✅ All mods updated.");
 }
 
 run();

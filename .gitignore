@@ -25,4 +25,11 @@ dist-ssr
 
 # Environment variables
 .env
+.env.production
 /data/
+
+/.minecraft/*
+!/.minecraft/.gitkeep
+
+/mods_inactive/*
+!/mods_inactive/*.gitkeep

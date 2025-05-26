@@ -25,17 +25,18 @@ db.prepare(`
     access_token TEXT NOT NULL,
     uuid TEXT NOT NULL,
     name TEXT NOT NULL,
-    user_properties TEXT
+    user_properties TEXT,
+    refresh_token TEXT
   )
 `).run();
 
 // Lisää uusi käyttäjä
-export function addUser({ access_token, uuid, name, user_properties }) {
+export function addUser({ access_token, uuid, name, user_properties, refresh_token }) {
   const stmt = db.prepare(`
-    INSERT INTO users (access_token, uuid, name, user_properties)
-    VALUES (?, ?, ?, ?)
+    INSERT INTO users (access_token, uuid, name, user_properties, refresh_token)
+    VALUES (?, ?, ?, ?, ?)
   `);
-  stmt.run(access_token, uuid, name, user_properties);
+  stmt.run(access_token, uuid, name, user_properties, refresh_token);
 }
 
 // Hae kaikki käyttäjät

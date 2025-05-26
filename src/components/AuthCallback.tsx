@@ -10,8 +10,6 @@ const AuthCallback = () => {
       return;
     }
 
-    console.log("✅ Code received in popup:", code);
-
     // Lähetä koodi pääikkunaan
     window.opener.postMessage({ type: "auth-code", code }, "*");
 
