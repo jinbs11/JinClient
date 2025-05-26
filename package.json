@@ -3,6 +3,20 @@
   "version": "1.0.0",
   "main": "electron/main.js",
   "type": "module",
+  "build": {
+    "appId": "com.jinclient.app",
+    "productName": "JinClient",
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "server/**/*",
+      "db.js",
+      "mods_inactive"
+    ],
+    "win": {
+      "icon": "dist/logo.ico"
+    }
+  },
   "scripts": {
     "dev": "concurrently \"npm:server\" \"npm:react\" \"npm:electron\"",
     "server": "node ./server/index.js",
@@ -11,7 +25,10 @@
     "build": "vite build",
     "rebuild": "electron-rebuild -f -w better-sqlite3",
     "postinstall": "electron-rebuild install-app-deps",
-    "preview": "vite preview"
+    "preview": "vite preview",
+
+    "pack": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder"
   },
   "dependencies": {
     "@azure/msal-browser": "^4.11.1",

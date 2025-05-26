@@ -117,7 +117,7 @@ export const ModsView = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('../mods.json')
+    fetch('mods.json')
       .then(res => res.json())
       .then(data => {
         setMods(data);

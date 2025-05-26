@@ -3,18 +3,24 @@ import Database from 'better-sqlite3';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import { app } from 'electron';
 
 // __dirname ESM-yhteensopivasti
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Luo 'data' kansio, jos sitä ei ole
-const dataDir = path.join(__dirname, 'data');
+// Selvitä oikea data-kansio
+const isDev = !app.isPackaged;
+const dataDir = isDev
+  ? path.join(__dirname, 'data')
+  : path.join(app.getPath('userData'), 'data');
+
+// Luo data-kansio, jos sitä ei ole
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
 }
 
-// Luo tai avaa tietokanta data-kansion sisällä
+// Luo tai avaa tietokanta
 const dbPath = path.join(dataDir, 'users.db');
 const db = new Database(dbPath);
 

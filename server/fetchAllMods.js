@@ -5,6 +5,7 @@ import followRedirects from 'follow-redirects';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { app } from 'electron';
 
 const { https } = followRedirects;
 
@@ -13,8 +14,8 @@ const __dirname = dirname(__filename);
 
 dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
-const modsFolderPath = path.join(__dirname, '..', 'mods_inactive');
-const modsJsonPath = path.join(__dirname, '..', 'public', 'mods.json');
+const modsFolderPath = path.join(__dirname, '..', 'dist', 'mods_inactive');
+const modsJsonPath = path.join(app.getPath('userData'), 'mods.json');
 
 // Varmista että kansio on olemassa
 if (!fs.existsSync(modsFolderPath)) {

@@ -63,6 +63,9 @@ ipcMain.handle("login-with-microsoft", async () => {
       }
     });
 
+    authWin.setMenuBarVisibility(false);
+    authWin.removeMenu();
+
     authWin.loadURL(authUrl);
 
     // Kehitystilassa tarkkaile will-redirect
@@ -135,7 +138,7 @@ function createMainWindow() {
   mainWindow.once('ready-to-show', () => {
     splashWindow.close();
     mainWindow.show();
-    if (isDev) mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
   });
 }
 
