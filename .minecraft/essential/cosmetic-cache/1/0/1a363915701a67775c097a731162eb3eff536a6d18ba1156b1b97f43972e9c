@@ -1,9 +1,0 @@
-[
-  {
-    "id": "T_POSE",
-    "type": "INTERRUPTS_EMOTE",
-    "enabled": true,
-    "data": {
-    }
-  }
-]

@@ -1,8 +1,11 @@
+import { app } from 'electron';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import { Client } from 'minecraft-launcher-core';
 import { randomUUID } from 'crypto';
 import { getLastUsedUser } from '../server/userHandler.js';
+
+const isDev = !app.isPackaged;
 
 export async function launchMinecraft() {
   const user = getLastUsedUser();
@@ -16,7 +19,9 @@ export async function launchMinecraft() {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
 
-  const forgePath = path.join(__dirname, '..', 'forge-1.8.9.jar');
+  const forgePath = isDev
+    ? path.join(__dirname, '..', 'forge-1.8.9.jar')
+    : path.join(process.resourcesPath, 'dist', 'forge-1.8.9.jar');
   const client_token = randomUUID();
 
   const opts = {
