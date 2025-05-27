@@ -16,11 +16,13 @@ router.post('/autologin', async (req, res) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
-        client_id: process.env.CLIENT_ID,
-        client_secret: process.env.CLIENT_SECRET,
+        client_id: "e6fd8ee6-21b5-482d-988d-b8aae6980d3a",
+        client_secret: '',
         refresh_token: user.refresh_token,
         grant_type: 'refresh_token',
-        redirect_uri: process.env.REDIRECT_URI
+        redirect_uri: isDev
+          ? "http://localhost:5173/auth-callback"
+          : "jinclient://auth-callback"
       })
     });
 

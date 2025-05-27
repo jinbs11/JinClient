@@ -5,23 +5,29 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { app } from 'electron';
 
-// __dirname ESM-yhteensopivasti
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Selvitä oikea data-kansio
+// Tarkista kehitysvaihe
 const isDev = !app.isPackaged;
+
+// Määrittele data-hakemisto
 const dataDir = isDev
   ? path.join(__dirname, 'data')
   : path.join(app.getPath('userData'), 'data');
 
-// Luo data-kansio, jos sitä ei ole
+// Luo kansio jos puuttuu
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
 }
 
-// Luo tai avaa tietokanta
-const dbPath = path.join(dataDir, 'users.db');
+// Määrittele polku tietokantaan
+const dbPath = isDev
+  ? path.join(__dirname, 'data', 'users.db') // Kehitysympäristössä
+  : path.join(process.resourcesPath, 'app.asar.unpacked', 'data', 'users.db'); // Tuotantoversiossa
+
+
+// ✅ Nyt on turvallista luoda tietokanta
 const db = new Database(dbPath);
 
 // Luo taulu, jos ei ole vielä olemassa

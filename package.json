@@ -11,7 +11,11 @@
       "electron/**/*",
       "server/**/*",
       "db.js",
-      "mods_inactive"
+      "mods_inactive",
+      "data/**"
+    ],
+    "asarUnpack": [
+      "data/**"
     ],
     "win": {
       "icon": "dist/logo.ico"
@@ -24,7 +28,7 @@
     "electron": "wait-on http://localhost:5173 && electron .",
     "build": "vite build",
     "rebuild": "electron-rebuild -f -w better-sqlite3",
-    "postinstall": "electron-rebuild install-app-deps",
+    "postinstall": "electron-builder install-app-deps",
     "preview": "vite preview",
 
     "pack": "npm run build && electron-builder --dir",

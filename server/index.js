@@ -6,7 +6,7 @@ const app = express();
 const PORT = 5174;
 import { getLastUsedUser } from './userHandler.js';
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors());
 app.use(express.json());
 
 app.post('/auth/token', async (req, res) => {

@@ -35,6 +35,7 @@ async function runFetchMods() {
   try {
     const { stdout, stderr } = await execFileAsync('node', [fetchModsScript]);
     if (stderr) console.error('⚠️ stderr:', stderr);
+    console.log('✅ onnistui');
   } catch (error) {
     console.error('❌ Failed to run fetchAllMods.js:', error.message);
   }
@@ -83,6 +84,10 @@ ipcMain.handle("login-with-microsoft", async () => {
       });
     }
   });
+});
+
+ipcMain.handle('auth-autologin', async () => {
+  return await autologin();
 });
 
 let splashWindow;
@@ -183,8 +188,4 @@ ipcMain.handle('check-installed-mods', async (event, filenames) => {
     const filePath = path.join(modsPath, filename);
     return fs.existsSync(filePath);
   });
-});
-
-ipcMain.handle('auth-autologin', async () => {
-  return await autologin();
 });

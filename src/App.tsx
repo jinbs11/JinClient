@@ -40,6 +40,7 @@ useEffect(() => {
 
         if (res.status === 404) {
           setUser(null);
+          console.error("404abc")
           return;
         }
 
